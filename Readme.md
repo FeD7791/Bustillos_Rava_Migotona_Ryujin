@@ -60,3 +60,5 @@ Personas de 10 años en adelante
 
 ### Notas
 *La cantidad de productos puede variar, se pueden agregar mas dependiendo de si es suficiente o insuficiente*
+
+Referencia para hacer el Readme (https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)[^1]
