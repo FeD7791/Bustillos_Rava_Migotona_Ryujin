@@ -1,7 +1,7 @@
 # Migotona Ryujin
 
-## Descripcion:
-*Migotona Ryujin es una tienda online para la compra de TCG, Libros de Genero de Terror, Juegos de mesa y productos de Anime*
+## Descripción:
+*Migotona Ryujin es una tienda online para la compra de TCG, Libros de Terror y misterio, Juegos de mesa y productos de Anime*
 
 ## Productos:
 ### Juegos de Mesa
@@ -19,6 +19,14 @@
 - Manual de Segunda Edición
 - Manual de Tercera Edición
 - Manual de Quinta Edición
+
+### Libros de Terror y Misterio
+- LOVECRAFT, H. P.
+ - En las montañas de la locura y otros relatos
+ - La llamada de Cthulhu
+
+- PAULIDES, D.
+ - Missing 411 
 
 ### Juegos de Cartas (TCG)
 #### Magic
@@ -40,7 +48,7 @@
 - Figuras de Anime
 - Warcraft
 
-## Publico objetivo
+## Público objetivo
 Personas de 10 años en adelante
 
 ## Fonts
