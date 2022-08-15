@@ -21,11 +21,11 @@
 - Manual de Quinta Edición
 
 ### Libros de Terror y Misterio
-- LOVECRAFT, H. P.
+#### LOVECRAFT, H. P.
  - En las montañas de la locura y otros relatos
  - La llamada de Cthulhu
 
-- PAULIDES, D.
+#### PAULIDES, D.
  - Missing 411 
 
 ### Juegos de Cartas (TCG)
