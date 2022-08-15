@@ -51,13 +51,11 @@ Personas de 10 años en adelante
 *La idea es manejar fondos negros con letras blancas mas un ocasional color rojo*
 *Por otro lado, para el fondo principal de la pagina se quieren utilizar imagenes, como en https://magic.wizards.com/es/products/challenger-decks*
 
-- Color Para Letras: `#FEFBF6` 
-- Color Para fondos: `#000000` 
-- Color Terciario: `#F32424` 
+- Color Para Letras: `#FEFBF6` (Blanco)
+- Color Para fondos: `#000000` (Negro)
+- Color Terciario: `#F32424` (Rojo)
 
 ## Logo
-Se ha creado un logo, con forma cuadrada que se planea incorporar como una imagen pequeña en distintas secciones, en la parte superior -
-derecha de la página (esto puede variar)
 ![logo](logo.png)
 
 ### Notas
