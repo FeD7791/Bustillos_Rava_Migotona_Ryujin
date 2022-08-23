@@ -73,6 +73,8 @@ Personas de 10 años en adelante
 
 ---
 **LINKS FIGMA**
+
+---
 #MOBILE
 - https://www.figma.com/file/OeGb2FI9RaEPwc1agCOP4J/phone_main_page?node-id=0%3A1
 ---
