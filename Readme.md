@@ -72,3 +72,8 @@ Personas de 10 años en adelante
 *La cantidad de productos puede variar, se pueden agregar mas dependiendo de si es suficiente o insuficiente*
 
 ---
+**LINKS FIGMA**
+#MOBILE
+- https://www.figma.com/file/OeGb2FI9RaEPwc1agCOP4J/phone_main_page?node-id=0%3A1
+#DESKTOP
+- https://www.figma.com/file/EsOQvsQXMtYyo6qHJn29mL/Desktop?node-id=0%3A1
