@@ -72,6 +72,14 @@ Personas de 10 años en adelante
 *La cantidad de productos puede variar, se pueden agregar mas dependiendo de si es suficiente o insuficiente*
 
 ---
+**NOTA 2**
+Agregados Los elementos del Sprin II TP I Y II , Estos se encuentran en las carpetas:
+
+- cart
+- detail_product
+- escritorio
+
+---
 **LINKS FIGMA**
 
 ---
