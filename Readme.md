@@ -73,12 +73,17 @@ Personas de 10 años en adelante
 
 ---
 **NOTA 2**
-Agregados Los elementos del Sprin II TP I Y II , Estos se encuentran en las carpetas:
+*Agregados los elementos del Sprint II TP I Y II . Estos se encuentran en las carpetas:*
 
 - cart
 - detail_product
 - escritorio
 
+---
+**NOTA 3**
+*Agregados los Formularios de Login y Creacion de cuenta en las carpetas:*
+- crear_cuenta (Crete Account)
+- ingresar (Login)
 ---
 **LINKS FIGMA**
 
