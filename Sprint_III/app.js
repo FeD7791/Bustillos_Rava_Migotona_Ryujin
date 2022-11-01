@@ -10,7 +10,8 @@ app.set('views' , __dirname + '/views'); //Se fija una ruta dinamica (con __dirn
 app.use(express.static('public'))
 app.use('/css', express.static(__dirname + 'public/css'))
 
-
+//Rutas de las vistas web
+app.use('/', require('./routes/rutas_web'))
 
 //Listen port
 app.listen(PORT , ()=> console.log('listening on port',PORT));
