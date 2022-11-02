@@ -5,7 +5,7 @@ const {getall,getone} = require('../controllers/controllers');
 
 //Rutas
 router_products.get('/products', getall);
-router_products.get('products/:id',getone);
+router_products.get('/products/:id',getone);
 
 module.exports = router_products
 
