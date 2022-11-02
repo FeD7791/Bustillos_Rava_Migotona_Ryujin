@@ -12,6 +12,8 @@ app.use('/css', express.static(__dirname + 'public/css'))
 
 //Rutas de las vistas web
 app.use('/', require('./routes/rutas_web'))
+//Rutas de los productos
+app.use('/products',require('./routes/rutas_productos'))
 
 //Listen port
 app.listen(PORT , ()=> console.log('listening on port',PORT));
