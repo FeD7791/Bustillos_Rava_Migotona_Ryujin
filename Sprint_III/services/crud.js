@@ -19,3 +19,5 @@ function read_one_product(ident){
     const my_product = lista.filter(finder);
     return my_product
 }
+
+module.exports = {read_products,read_one_product}
