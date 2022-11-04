@@ -33,7 +33,7 @@ router_web.get('/crear_cuenta', (req,res)=>{
     res.render('crear_cuenta.ejs')
     
 })
-
+//Validar formulario de creacion de cuenta
 router_web.post('/register', urlencoded ,[
     check('nombre','Debe introducir un nombre de usuario con minimo de 2 letras')
        .exists()

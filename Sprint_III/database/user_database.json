@@ -1,1 +1,8 @@
-[]
+[
+    {"nombre":"Jorge Federico",
+    "apellido":"Bustillos Rava",
+    "correo":"fedepicka@hotmail.com",
+    "fecha_de_nacimiento":"1991-09-11",
+    "contrasenia":"contrasenia098767"
+}
+]

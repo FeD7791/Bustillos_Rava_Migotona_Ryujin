@@ -12,12 +12,17 @@ const getall = (req,res)=>{
         return res.status(200).json(all_products)
     }
 }
-
+//Obtenemos un solo producto
 const getone = (req,res)=>{
     const{id}=req.params;
     id_p=parseInt(id)
     const product = read_one_product(id_p)
     return res.status(200).json(product)
+}
+
+//Creamos un nuevo usuario en la base de datos
+const create_user = (req,res)=>{
+    const {nombre,apellido,email,birth,clave} = req.body
 }
 
 module.exports = {getall,getone}
