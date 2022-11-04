@@ -25,4 +25,4 @@ const create_user = (req,res)=>{
     const {nombre,apellido,email,birth,clave} = req.body
 }
 
-module.exports = {getall,getone}
+module.exports = {getall,getone,create_user}

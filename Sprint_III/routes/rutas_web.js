@@ -2,6 +2,7 @@ const express = require('express');
 const router_web = express.Router();
 const bodyparser = require('body-parser');
 const { check, validationResult} = require('express-validator');
+const {create_user} = require('../controllers/controllers') 
 
 const urlencoded = bodyparser.urlencoded({extended:false})
 //ESCRITORIO
@@ -63,5 +64,8 @@ router_web.post('/register', urlencoded ,[
     }
     
 })
+
+//Ruta para agregar el usuario 
+router_web.post('/register',create_user)
 
 module.exports = router_web
