@@ -1,5 +1,7 @@
 const express = require('express');
 const router_web = express.Router();
+const bodyparser = require('body-parser');
+const { body, validationResult, check } = require('express-validator');
 
 
 //ESCRITORIO
