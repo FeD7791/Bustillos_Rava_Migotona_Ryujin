@@ -1,4 +1,4 @@
-const {read_products,read_one_product} = require('../services/crud');
+const {read_products,read_one_product,add_user,read_users,writeJSON_user} = require('../services/crud');
 
 //Obtenemos todos los productos
 const getall = (req,res)=>{
@@ -22,7 +22,14 @@ const getone = (req,res)=>{
 
 //Creamos un nuevo usuario en la base de datos
 const create_user = (req,res)=>{
-    const {nombre,apellido,email,birth,clave} = req.body
+    const {nombre,apellido,correo,fecha_de_nacimiento,contrasenia} = req.body
+    console.log(req.body)
+    add_user(nombre,apellido,correo,fecha_de_nacimiento,contrasenia)
+    //Creacion exitosa
+    return res.status(201).json({
+        status: 'exito',
+        message: 'Usuario Agregado'
+    })
 }
 
 module.exports = {getall,getone,create_user}
