@@ -1,4 +1,4 @@
-const {read_products,read_one_product,add_user,read_users,writeJSON_user} = require('../services/crud');
+const {read_products,read_one_product,add_user,user_filter} = require('../services/crud');
 const bcrypt = require('bcrypt')
 //Obtenemos todos los productos
 const getall = (req,res)=>{
@@ -35,4 +35,16 @@ const create_user = (req,res)=>{
     })
 }
 
-module.exports = {getall,getone,create_user}
+//Buscador de usuario por email
+const user_session_validator = (req,res)=>{
+    const datos = req.body;
+    const email = datos.email;
+    let boleano = user_filter(email);
+    if(boleano){
+        res.json('ecnontrado')
+    }else{
+        res.json('no encontrado')
+    }
+}
+
+module.exports = {getall,getone,create_user,user_session_validator}

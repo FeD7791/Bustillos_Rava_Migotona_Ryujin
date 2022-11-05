@@ -3,7 +3,7 @@ const router_web = express.Router();
 const bodyparser = require('body-parser');
 const bcrypt = require('bcrypt')
 const { check, validationResult} = require('express-validator');
-const {create_user} = require('../controllers/controllers') 
+const {create_user, user_session_validator} = require('../controllers/controllers') 
 
 const urlencoded = bodyparser.urlencoded({extended:false})
 router_web.use(bodyparser.json())//INDISPENSABLE PARA HACER POST EN JSON
@@ -69,6 +69,9 @@ router_web.post('/register',urlencoded,[
     } 
     
 }, create_user)
+
+//Bsucar email Usuario
+router_web.post('/login',urlencoded,user_session_validator)
 
 //await fetch('http://localhost:3000/register')
 

@@ -50,5 +50,17 @@ function add_user(nombre_user,apellido_user,correo_user,nacimiento_user,clave_us
     
 }
 
+//Funcion para filtrar email de usuario
+//La funcion regresa True or False, segun haya encontrado el email o no en la bse de datos
+function user_filter(arg1){
+    let boleano = false;
+    const lista = read_users()
+    const user = lista.filter(check_email)//filstra al usuario segun su email, user guarda el objeto con todos los otros parametros
+    
+    function check_email(arg){return arg.correo === arg1}
+    if(user.length != 0){ boleano = true}
+    return boleano
 
-module.exports = {read_products,read_one_product,read_users,writeJSON_user,add_user}
+}
+
+module.exports = {read_products,read_one_product,read_users,writeJSON_user,add_user,user_filter}
