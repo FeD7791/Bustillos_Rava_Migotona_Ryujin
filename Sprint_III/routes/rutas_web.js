@@ -1,6 +1,7 @@
 const express = require('express');
 const router_web = express.Router();
 const bodyparser = require('body-parser');
+const bcrypt = require('bcrypt')
 const { check, validationResult} = require('express-validator');
 const {create_user} = require('../controllers/controllers') 
 

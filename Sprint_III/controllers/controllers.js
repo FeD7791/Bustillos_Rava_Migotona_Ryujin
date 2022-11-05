@@ -1,5 +1,5 @@
 const {read_products,read_one_product,add_user,read_users,writeJSON_user} = require('../services/crud');
-
+const bcrypt = require('bcrypt')
 //Obtenemos todos los productos
 const getall = (req,res)=>{
     const all_products = read_products();
@@ -23,8 +23,11 @@ const getone = (req,res)=>{
 //Creamos un nuevo usuario en la base de datos
 const create_user = (req,res)=>{
     const {nombre,apellido,correo,fecha_de_nacimiento,contrasenia} = req.body
-    console.log(req.body)
-    add_user(nombre,apellido,correo,fecha_de_nacimiento,contrasenia)
+    //Encriptado de clave///////////////////////////////////////////////////
+    const clave_hash = bcrypt.hashSync(contrasenia,8)
+    console.log(clave_hash)
+    ////////////////////////////////////////////////////////////////////////
+    add_user(nombre,apellido,correo,fecha_de_nacimiento,clave_hash)
     //Creacion exitosa
     return res.status(201).json({
         status: 'exito',

@@ -19,5 +19,12 @@
     "correo": "teresarava@gmail.com",
     "fecha_de_nacimiento": "2022-11-24",
     "contrasenia": "asdf234"
+  },
+  {
+    "nombre": "beatriz",
+    "apellido": "bustillos rava",
+    "correo": "pabea@hotmail.com",
+    "fecha_de_nacimiento": "1993-03-01",
+    "contrasenia": "$2b$08$EnInccN/Of/cZvmFzCC56e/lBfFJ.FdPTg88i28ZT7x/vVooVm1Va"
   }
 ]
