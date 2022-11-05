@@ -31,12 +31,13 @@ function read_one_product(ident){
 //Funcion de Escritura en formato JSON en base de datos de usuario
 function writeJSON_user(arg){
     let in_json = JSON.stringify(arg,null,2);
-    fs.writeFileSync(__dirname + '/../database/user_database.json')
+    fs.writeFileSync(__dirname + '/../database/user_database.json',in_json)
 }
 
 //Agregar un usuario a la base de datos de un usuario
 function add_user(nombre_user,apellido_user,correo_user,nacimiento_user,clave_user){
     const lista = read_users();
+    
     lista.push({
         nombre:nombre_user,
         apellido:apellido_user,
@@ -44,7 +45,10 @@ function add_user(nombre_user,apellido_user,correo_user,nacimiento_user,clave_us
         fecha_de_nacimiento:nacimiento_user,
         contrasenia:clave_user
     })
+    //console.log(lista);
     writeJSON_user(lista)
+    
 }
+
 
 module.exports = {read_products,read_one_product,read_users,writeJSON_user,add_user}
