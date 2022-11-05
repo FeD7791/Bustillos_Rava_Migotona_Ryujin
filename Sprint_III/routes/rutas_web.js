@@ -5,6 +5,7 @@ const { check, validationResult} = require('express-validator');
 const {create_user} = require('../controllers/controllers') 
 
 const urlencoded = bodyparser.urlencoded({extended:false})
+router_web.use(bodyparser.json())//INDISPENSABLE PARA HACER POST EN JSON
 //ESCRITORIO
 router_web.get('/' , (req,res)=>{
     res.render('desktop_principal.ejs')
@@ -35,7 +36,7 @@ router_web.get('/crear_cuenta', (req,res)=>{
     
 })
 //Validar formulario de creacion de cuenta
-router_web.post('/register', urlencoded ,[
+router_web.post('/register',urlencoded,[
     check('nombre','Debe introducir un nombre de usuario con minimo de 2 letras')
        .exists()
        .isLength({min:2}),
@@ -55,17 +56,28 @@ router_web.post('/register', urlencoded ,[
 
 
 
-],(req,res)=>{
+], (req,res,next)=>{
     const error = validationResult(req)
     if(!error.isEmpty()){
         return res.status(400).json({errors: error.array()});
     }else{
         res.json('verificado!')
-    }
+        next()
+
+        
+    } 
     
-})
+}, create_user)
+
+//await fetch('http://localhost:3000/register')
+
+// async function buscar(){
+//     const response = await fetch('http://localhost:3000/register')
+//     const json = await response.json()
+// }
+// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
 //Ruta para agregar el usuario 
-router_web.post('/register',create_user)
+//router_web.post('/register',create_user)
 
 module.exports = router_web

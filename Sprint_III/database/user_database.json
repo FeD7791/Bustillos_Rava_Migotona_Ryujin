@@ -1,8 +1,23 @@
 [
-    {"nombre":"Jorge Federico",
-    "apellido":"Bustillos Rava",
-    "correo":"fedepicka@hotmail.com",
-    "fecha_de_nacimiento":"1991-09-11",
-    "contrasenia":"contrasenia098767"
-}
+  {
+    "nombre": "Jorge Federico",
+    "apellido": "Bustillos Rava",
+    "correo": "fedepicka@hotmail.com",
+    "fecha_de_nacimiento": "1991-09-11",
+    "contrasenia": "contrasenia098767"
+  },
+  {
+    "nombre": "Jorge Federico",
+    "apellido": "Rava",
+    "correo": "fedepicka@hotmail.com",
+    "fecha_de_nacimiento": "2022-11-15",
+    "contrasenia": "asdlfkj34234"
+  },
+  {
+    "nombre": "teresa",
+    "apellido": "Rava",
+    "correo": "teresarava@gmail.com",
+    "fecha_de_nacimiento": "2022-11-24",
+    "contrasenia": "asdf234"
+  }
 ]
