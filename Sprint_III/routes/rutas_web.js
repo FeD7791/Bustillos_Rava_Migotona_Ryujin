@@ -3,7 +3,7 @@ const router_web = express.Router();
 const bodyparser = require('body-parser');
 const bcrypt = require('bcrypt')
 const { check, validationResult} = require('express-validator');
-const {create_user, user_session_validator} = require('../controllers/controllers') 
+const {create_user, user_session_validator, middleware_cookie} = require('../controllers/controllers') 
 
 const urlencoded = bodyparser.urlencoded({extended:false})
 router_web.use(bodyparser.json())//INDISPENSABLE PARA HACER POST EN JSON
@@ -50,7 +50,7 @@ router_web.post('/register',urlencoded,[
     check('fecha_de_nacimiento','fecha de nacimiento debe ser valida')
        .exists()
        .isDate(),
-    check('contrasenia','Debe tener almenos 5 caracteres')
+    check('contrasenia','La clave debe tener almenos 5 caracteres')
        .exists()
        .isLength({min:5})
                 
@@ -59,8 +59,11 @@ router_web.post('/register',urlencoded,[
 
 ], (req,res,next)=>{
     const error = validationResult(req)
+    const validaciones = error.array();//arreglo con errores
+    const valores = req.body
     if(!error.isEmpty()){
-        return res.status(400).json({errors: error.array()});
+        //return res.status(400).json({errors: error.array()});
+        res.render('../views/crear_cuenta.ejs',{validaciones:validaciones,valores:valores})
     }else{
         res.json('verificado!')
         next()
@@ -72,6 +75,9 @@ router_web.post('/register',urlencoded,[
 
 //Bsucar email Usuario
 router_web.post('/login',urlencoded,user_session_validator)
+
+//Cookies for logged user
+router_web.get('loged_user',)
 
 //await fetch('http://localhost:3000/register')
 

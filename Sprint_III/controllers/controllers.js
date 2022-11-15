@@ -1,5 +1,6 @@
 const {read_products,read_one_product,add_user,user_filter} = require('../services/crud');
 const bcrypt = require('bcrypt')
+const cookieParser = require('cookie-parser')
 //Obtenemos todos los productos
 const getall = (req,res)=>{
     const all_products = read_products();
@@ -17,7 +18,13 @@ const getone = (req,res)=>{
     const{id}=req.params;
     id_p=parseInt(id)
     const product = read_one_product(id_p)
-    return res.status(200).json(product)
+    if(product.length > 0){
+        return res.status(200).json(product)
+
+    }else{
+        return res.status(404).json('El producto no existe')
+    }
+    
 }
 
 //Creamos un nuevo usuario en la base de datos
@@ -57,10 +64,28 @@ const boleano3 = boleano && boleano2
 
 
     if(boleano3){
-        res.json('ecnontrado')
+        //res.json('ecnontrado')
+        res.cookie('email_user',email,{
+            maxage: 15*60*1000
+        })
+        res.cookie('clave',key,{
+            maxage: 1*60*1000
+        })
+        //res.status(200).json({msg:'Usuario logueado'})
+        res.render('../views/desktop_principal.ejs')
+        
+
     }else{
         res.json('no encontrado')
     }
 }
 
-module.exports = {getall,getone,create_user,user_session_validator}
+const middleware_cookie = (req,res)=>{
+    const datos = req.body;
+    const email = datos.email;
+    const clave = datos.pwd
+    res.cookie('email_user',email,{
+        maxage: 15*60*1000
+    })
+}
+module.exports = {getall,getone,create_user,user_session_validator,middleware_cookie}

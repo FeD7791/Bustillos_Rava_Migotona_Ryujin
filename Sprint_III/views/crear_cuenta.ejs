@@ -30,6 +30,13 @@
                 </fieldset>
                 <input type="submit" value="Crear Cuenta" class="ingresar_button">
             </form>
+            <% if(typeof validaciones != 'undefined') { %>
+                <% validaciones.forEach( (validaciones)=> { %>
+                <div class="alert alert-primary" role="alert">
+                    <strong><%= validaciones.msg %></strong>
+                </div>
+                <% }) %>
+              <% } %>
         </div>
         <div class="main_der"></div>
     </main>

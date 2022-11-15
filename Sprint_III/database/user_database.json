@@ -33,5 +33,12 @@
     "correo": "jorgebustillos@gmail.com",
     "fecha_de_nacimiento": "2022-11-16",
     "contrasenia": "$2b$08$eGInraP7XgqiWynSiuJtEO2Y5Gsa3KJ6xArHmMeQeiOtoVERyf8KS"
+  },
+  {
+    "nombre": "pakito",
+    "apellido": "parkour",
+    "correo": "pako@gmail.com",
+    "fecha_de_nacimiento": "2022-06-15",
+    "contrasenia": "$2b$08$K5DjbC0eToy9UgGbaC0fZuiUfbuQpxnro8JdEShiYGTLfH63xmz9."
   }
 ]
