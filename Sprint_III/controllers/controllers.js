@@ -39,8 +39,24 @@ const create_user = (req,res)=>{
 const user_session_validator = (req,res)=>{
     const datos = req.body;
     const email = datos.email;
-    let boleano = user_filter(email);
-    if(boleano){
+    const clave = datos.pwd
+
+    const [boleano,key] = user_filter(email);
+    //console.log(boleano)
+
+
+//Verificacion contrasenia utilizando bcrypt
+
+//console.log(key)
+//console.log(clave)
+let boleano2 = bcrypt.compareSync( clave ,key)
+
+const boleano3 = boleano && boleano2
+/////////////////////////////////////////////
+
+
+
+    if(boleano3){
         res.json('ecnontrado')
     }else{
         res.json('no encontrado')

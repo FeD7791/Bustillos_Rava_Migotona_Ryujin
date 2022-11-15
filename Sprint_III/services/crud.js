@@ -56,10 +56,13 @@ function user_filter(arg1){
     let boleano = false;
     const lista = read_users()
     const user = lista.filter(check_email)//filstra al usuario segun su email, user guarda el objeto con todos los otros parametros
-    
+    ///////////////////////////////
+    const key = user[0].contrasenia
+    ///////////////////////////////
+
     function check_email(arg){return arg.correo === arg1}
     if(user.length != 0){ boleano = true}
-    return boleano
+    return [boleano,key]
 
 }
 
