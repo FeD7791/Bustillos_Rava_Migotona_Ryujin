@@ -1,4 +1,6 @@
 const fs = require('fs');
+const{sequelize} = require('sequelize');
+const usuarios = require('../models/usuarios').usuarios
 
 // Lectura del archivo .json que contiene los productos
 const productos = fs.readFileSync(__dirname + '/../database/products.json');
@@ -35,18 +37,23 @@ function writeJSON_user(arg){
 }
 
 //Agregar un usuario a la base de datos de un usuario
-function add_user(nombre_user,apellido_user,correo_user,nacimiento_user,clave_user){
-    const lista = read_users();
+function add_user(nombre,apellido,correo,fecha_de_nacimiento,contrasenia){
+    // const lista = read_users();
     
-    lista.push({
-        nombre:nombre_user,
-        apellido:apellido_user,
-        correo:correo_user,
-        fecha_de_nacimiento:nacimiento_user,
-        contrasenia:clave_user
-    })
-    //console.log(lista);
-    writeJSON_user(lista)
+    // lista.push({
+    //     nombre:nombre_user,
+    //     apellido:apellido_user,
+    //     correo:correo_user,
+    //     fecha_de_nacimiento:nacimiento_user,
+    //     contrasenia:clave_user
+    // })
+    // //console.log(lista);
+    // writeJSON_user(lista)
+    
+    const users = usuarios.create({nombre,apellido,correo,fecha_de_nacimiento,contrasenia})
+    return users
+    .then(users => res.status(201).send(users))//Status code 201 = created
+    .catch(error => res.status(500).send(error))//Status code 500 = internal server error
     
 }
 

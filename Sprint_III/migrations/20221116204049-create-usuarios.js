@@ -21,6 +21,9 @@ module.exports = {
       fecha_de_nacimiento: {
         type: Sequelize.DATEONLY
       },
+      contrasenia: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

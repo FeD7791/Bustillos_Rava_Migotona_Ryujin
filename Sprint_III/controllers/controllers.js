@@ -32,7 +32,7 @@ const create_user = (req,res)=>{
     const {nombre,apellido,correo,fecha_de_nacimiento,contrasenia} = req.body
     //Encriptado de clave///////////////////////////////////////////////////
     const clave_hash = bcrypt.hashSync(contrasenia,8)
-    console.log(clave_hash)
+    //console.log(clave_hash)
     ////////////////////////////////////////////////////////////////////////
     add_user(nombre,apellido,correo,fecha_de_nacimiento,clave_hash)
     //Creacion exitosa
