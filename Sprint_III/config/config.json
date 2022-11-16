@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "database_development",
+    "password": "8Wqpj@D5b8g3",
+    "database": "migotona_database",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
