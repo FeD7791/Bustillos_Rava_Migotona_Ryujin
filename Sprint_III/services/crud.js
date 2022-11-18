@@ -1,6 +1,6 @@
 const fs = require('fs');
 const{sequelize} = require('sequelize');
-const usuarios = require('../models/usuarios').usuarios
+const usuarios = require('../models').usuarios
 
 // Lectura del archivo .json que contiene los productos
 const productos = fs.readFileSync(__dirname + '/../database/products.json');
@@ -52,24 +52,24 @@ function add_user(nombre,apellido,correo,fecha_de_nacimiento,contrasenia){
     
     const users = usuarios.create({nombre,apellido,correo,fecha_de_nacimiento,contrasenia})
     return users
-    .then(users => res.status(201).send(users))//Status code 201 = created
-    .catch(error => res.status(500).send(error))//Status code 500 = internal server error
+    
     
 }
 
 //Funcion para filtrar email de usuario
 //La funcion regresa True or False, segun haya encontrado el email o no en la bse de datos
-function user_filter(arg1){
-    let boleano = false;
-    const lista = read_users()
-    const user = lista.filter(check_email)//filstra al usuario segun su email, user guarda el objeto con todos los otros parametros
-    ///////////////////////////////
-    const key = user[0].contrasenia
-    ///////////////////////////////
+async function user_filter(arg1){
+    
+    const user = await usuarios.findOne({where:{correo:arg1}})
+    
+    
 
-    function check_email(arg){return arg.correo === arg1}
-    if(user.length != 0){ boleano = true}
-    return [boleano,key]
+    ///////////////////////////////
+    const key = user.contrasenia
+    ///////////////////////////////
+    
+    
+    return key
 
 }
 

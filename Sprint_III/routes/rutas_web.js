@@ -3,7 +3,7 @@ const router_web = express.Router();
 const bodyparser = require('body-parser');
 const bcrypt = require('bcrypt')
 const { check, validationResult} = require('express-validator');
-const {create_user, user_session_validator, middleware_cookie} = require('../controllers/controllers') 
+const {create_user, user_session_validator, middleware_cookie,deleteOne} = require('../controllers/controllers') 
 
 const urlencoded = bodyparser.urlencoded({extended:false})
 router_web.use(bodyparser.json())//INDISPENSABLE PARA HACER POST EN JSON
@@ -79,6 +79,8 @@ router_web.post('/login',urlencoded,user_session_validator)
 //Cookies for logged user
 router_web.get('loged_user',)
 
+//Borrar cuenta
+router_web.delete('/usuarios/:id', deleteOne)
 //await fetch('http://localhost:3000/register')
 
 // async function buscar(){
