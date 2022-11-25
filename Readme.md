@@ -95,7 +95,7 @@ Personas de 10 años en adelante
 
 ---
 **NOTA 6**
-*SPRINT IV, parte I y parte II, agregados en sus respectivas ramas
+*SPRINT IV, parte I y parte II, agregados en sus respectivas ramas*
 
 ---
 **LINKS FIGMA**
