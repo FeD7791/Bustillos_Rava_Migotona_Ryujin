@@ -84,7 +84,6 @@ Personas de 10 años en adelante
 *Agregados los Formularios de Login y Creacion de cuenta en las carpetas:*
 - crear_cuenta (Crete Account)
 - ingresar (Login)
-- 
 ---
 **NOTA 4** 
 *SPRINT III, parte I, agregado en la carpeta Sprint III bajo la rama 'main_integrador'*
@@ -93,6 +92,10 @@ Personas de 10 años en adelante
 
 **NOTA 5**
 *SPRINT III, parte II, agrgado en la carpeta Sprint III bajo la rama 'sprint_iii_parte_ii'*
+
+---
+**NOTA 6**
+*SPRINT IV, parte I y parte II, agregados en sus respectivas ramas
 
 ---
 **LINKS FIGMA**
