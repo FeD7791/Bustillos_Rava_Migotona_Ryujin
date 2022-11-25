@@ -4,6 +4,9 @@ const cookieParser = require('cookie-parser')
 const{sequelize} = require('sequelize');
 const usuarios = require('../models').usuarios
 const productos = require('../models').productos
+
+
+////////////////////////////////////////////////////PRODUCTOS
 //Obtenemos todos los productos
 const getall = (req,res)=>{
     return productos.findAll()
@@ -20,7 +23,7 @@ const getone = (req,res)=>{
     .catch(error => res.status(404).send(error))
     
 }
-
+//Crear producto
 const create_product = (req,res)=>{
     const {nombre,descripcion,precio} = req.body
     console.log({nombre,descripcion,precio})
@@ -28,7 +31,7 @@ const create_product = (req,res)=>{
     .then(products => res.status(201).send(products))
     .catch(error => res.status(500).send(error))
 }
-
+//Borrar un producto
 const delete_product = async(req,res)=>{
     const {id} = req.params
     const product = await productos.findOne({where:{id:id}})
@@ -45,7 +48,7 @@ const delete_product = async(req,res)=>{
     
     
 }
-
+//////////////////////////////////////////////USUARIOS
 //Creamos un nuevo usuario en la base de datos
 const create_user = (req,res)=>{
     const {nombre,apellido,correo,fecha_de_nacimiento,contrasenia} = req.body
@@ -60,7 +63,7 @@ const create_user = (req,res)=>{
     
 }
 
-//Buscador de usuario por email
+//Creacion cookies usuario
 const user_session_validator = async(req,res)=>{
     const datos = req.body;
     const email = datos.email;
@@ -78,7 +81,7 @@ const user_session_validator = async(req,res)=>{
         maxage: 15*60*1000
         })
         res.cookie('clave',key,{
-        maxage: 1*60*1000
+        maxage: 15*60*1000
         })
         //res.status(200).json({msg:'Usuario logueado'})
         res.render('../views/desktop_principal.ejs')
@@ -95,7 +98,7 @@ const middleware_cookie = (req,res)=>{
         maxage: 15*60*1000
     })
 }
-
+//Borrar un usuario
 const deleteOne =  (req, res) => {
     const { id } = req.params
     const usuario = usuarios.findOne(

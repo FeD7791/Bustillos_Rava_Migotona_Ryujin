@@ -8,33 +8,33 @@ const productos = fs.readFileSync(__dirname + '/../database/products.json');
 const user_database = fs.readFileSync(__dirname + '/../database/user_database.json')
 
 //Lectura de productos desde el archivo JSON
-function read_products(){
-    let var_java = JSON.parse(productos)
-    return var_java
-}
+// function read_products(){
+//     let var_java = JSON.parse(productos)
+//     return var_java
+// }
 
 //Lectura de los datos de usuarios desde el archivo JSON
-function read_users(){
-    let var_java = JSON.parse(user_database);
-    return var_java
-}
+// function read_users(){
+//     let var_java = JSON.parse(user_database);
+//     return var_java
+// }
 
 //Lectura de un solo producto utilizando su ID
-function read_one_product(ident){
-    const lista = read_products()
+// function read_one_product(ident){
+//     const lista = read_products()
 
-    function finder(arg){
-        return arg.id === ident;
-    }
-    const my_product = lista.filter(finder);
-    return my_product
-}
+//     function finder(arg){
+//         return arg.id === ident;
+//     }
+//     const my_product = lista.filter(finder);
+//     return my_product
+// }
 
 //Funcion de Escritura en formato JSON en base de datos de usuario
-function writeJSON_user(arg){
-    let in_json = JSON.stringify(arg,null,2);
-    fs.writeFileSync(__dirname + '/../database/user_database.json',in_json)
-}
+// function writeJSON_user(arg){
+//     let in_json = JSON.stringify(arg,null,2);
+//     fs.writeFileSync(__dirname + '/../database/user_database.json',in_json)
+// }
 
 //Agregar un usuario a la base de datos de un usuario
 function add_user(nombre,apellido,correo,fecha_de_nacimiento,contrasenia){
