@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="../scrpits_js/script.js"></script>
     <%- include('./partials/header.ejs') %> 
     <main class="main">
         <div class="main_izq"></div>
@@ -19,7 +20,7 @@
                 <button style="border-radius: 10px;"><i class="fa-brands fa-google fa-2x" style="color: red;"></i></button>
 
             </div>
-            <form class="formulario" action="/register" method="post">
+            <form id="form_crear_ceunta" class="formulario" action="/register" method="post">
                 
                 <fieldset name="datos_creacion_cuenta" class="formulario">
                     <input type="text" id="name" name="nombre" placeholder="Nombre" class="input_style">
