@@ -91,11 +91,16 @@ Personas de 10 años en adelante
 ---
 
 **NOTA 5**
-*SPRINT III, parte II, agrgado en la carpeta Sprint III bajo la rama 'sprint_iii_parte_ii'*
+*SPRINT III, parte II, agrgado en la carpeta Sprint III bajo la rama 'sprint_iii_parte_ii'*<br />
+(rama: sprint_iv_parte_I) , la carpeta con los archivos requeridos esta en: Sprint_III>database
 
 ---
 **NOTA 6**
-*SPRINT IV, parte I y parte II, agregados en sus respectivas ramas*
+*SPRINT IV, parte I y parte II, agregados en sus respectivas ramas* <br />
+Sprint iv Trabajo II (rama: sprint_iv_part_II). Elementos para revisar se encuenran en:<br />
+Sprint III>config (Archivo de configuracion para la base de datos)<br />
+Sprint III>migrations (Archivos de migracion de la base de datos)<br />
+Sprint III>controllers (Se ha editado el archivo para editar los elementos en la base de datos con las funciones correspondientes, entre ellas las de crear producto y usuario)
 
 ---
 **LINKS FIGMA**
