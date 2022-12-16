@@ -87,11 +87,13 @@ Personas de 10 años en adelante
 ---
 **NOTA 4**
 *Recordatorio de que los elementos del sprint iv estan disponibles en sus respectivas ramas*
+
 -Sprint iv Trabajo I (rama: sprint_iv_parte_I) , la carpeta con los archivos requeridos esta en: Sprint_III>database
 -Sprint iv Trabajo II (rama: sprint_iv_part_II). Elementos para revisar se encuenran en: 
-Sprint III>config (Archivo de configuracion para la base de datos)
-Sprint III>migrations (Archivos de migracion de la base de datos)
-Sprint III>controllers (Se ha editado el archivo para editar los elementos en la base de datos con las funciones correspondientes, entre ellas las de crear producto y usuario)
+--Sprint III>config (Archivo de configuracion para la base de datos)
+--Sprint III>migrations (Archivos de migracion de la base de datos)
+--Sprint III>controllers (Se ha editado el archivo para editar los elementos en la base de datos con las funciones correspondientes, entre ellas las de crear producto y usuario)
+
 ---
 **LINKS FIGMA**
 
