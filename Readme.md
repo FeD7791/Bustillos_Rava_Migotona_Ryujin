@@ -2,7 +2,7 @@
 
 ---
 **NOTA**
-*SPRINT V, trabajo I agregado en su respectiva rama*<br />
+*SPRINT V, trabajo I agregado en ESTA rama*<br />
 Rama: sprint_v_trabajo_I<br />
 Agregados:<br />
 <br />
