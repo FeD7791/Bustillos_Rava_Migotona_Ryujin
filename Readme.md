@@ -101,6 +101,7 @@ Sprint iv Trabajo II (rama: sprint_iv_part_II). Elementos para revisar se encuen
 Sprint III>config (Archivo de configuracion para la base de datos)<br />
 Sprint III>migrations (Archivos de migracion de la base de datos)<br />
 Sprint III>controllers (Se ha editado el archivo para editar los elementos en la base de datos con las funciones correspondientes, entre ellas las de crear producto y usuario)
+
 ---
 **NOTA 7**
 *SPRINT V, trabajo I agregado en su respectiva rama*<br />
@@ -113,6 +114,7 @@ Editado: <br />
 <br />
 crear_cuenta.ejs (Bustillos_Rava_Migotona_Ryujin/Sprint_III/views/crear_cuent.ejs)
 
+---
 
 
 
