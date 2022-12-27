@@ -24,20 +24,20 @@
                 
                 <fieldset name="datos_creacion_cuenta" class="formulario">
                     <input type="text" id="name" name="nombre" placeholder="Nombre" class="input_style">
-                    <p id="log_name" style="font-size: 10px;"></p>
+                    <p id="log_name" style="font-size: 10px;color: red;"></p>
                     <input type="text" id="last_name" name="apellido" placeholder="Apellido" class="input_style">
-                    <p id="log_apellido" style="font-size: 10px;"></p>
+                    <p id="log_apellido" style="font-size: 10px;color: red;"></p>
                     <input type="email" id="email" name="correo" placeholder="Email" class="input_style">
-                    <p id="log_correo" style="font-size: 10px;"></p>
+                    <p id="log_correo" style="font-size: 10px;color: red;"></p>
                     <input type="date" id="birthdate" name="fecha_de_nacimiento" placeholder="Fecha de Nacimiento" class="input_style">
-                    <p id="log_f_nacimiento" style="font-size: 10px;"></p>
+                    <p id="log_f_nacimiento" style="font-size: 10px;color: red;"></p>
                     <input type="password" id="pwd" name="contrasenia" placeholder="Contraseña" class="input_style">
-                    <p id="log_contrasenia" style="font-size: 10px;"></p>
-                    <p id="log_contrasenia2" style="font-size: 10px;"></p>
+                    <p id="log_contrasenia" style="font-size: 10px;color: red;"></p>
+                    <p id="log_contrasenia2" style="font-size: 10px;color: red;"></p>
                 </fieldset>
                 <input type="submit" value="Crear Cuenta" class="ingresar_button">
             </form>
-            <script src="../scrpits_js/script.js"></script>
+            <script src="./scrpits_js/script.js"></script>
             <% if(typeof validaciones != 'undefined') { %>
                 <% validaciones.forEach( (validaciones)=> { %>
                 <div class="alert alert-primary" role="alert">
