@@ -115,7 +115,7 @@ crear_cuenta.ejs (Bustillos_Rava_Migotona_Ryujin/Sprint_III/views/crear_cuent.ej
 
 
 
----
+
 **LINKS FIGMA**
 
 ---
