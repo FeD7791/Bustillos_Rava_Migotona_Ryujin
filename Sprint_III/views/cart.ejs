@@ -11,32 +11,23 @@
         <main class="main">
             <div class="main_1"><!--Red-->
                 <div class="main_1_1">
-                    
-                        <div class="main_1_2">
-                            <div class="p_box" style="background-image: url(imagenes/challenger_deck.jpg); background-size: cover;"></div>
-                            <%- include('./partials/cart_schema.ejs') %>
-                        </div>
-                    
-                    
-                        <div class="main_1_2">
-                            <div class="p_box" style="background-image: url(imagenes/colonos.jpg); background-size: cover;"></div>
-                            <%- include('./partials/cart_schema.ejs') %>
-                        </div>
-                    
-                    
-                        <div class="main_1_2">
-                            <div class="p_box" style="background-image: url(imagenes/book.jpg); background-size: cover;"></div>
-                            <%- include('./partials/cart_schema.ejs') %>
-                        </div>
-                    
-                    
+                    <div class="main_1_2">
+                        <div class="p_box" style="background-image: url(imagenes/challenger_deck.jpg); background-size: cover;"></div>
+                    </div>
+                    <%- include('./partials/cart_schema.ejs') %>
                 </div>
-                <div class="main_1_1_2_extra">
-                    
-
+                <div class="main_1_1">
+                    <div class="main_1_2">
+                        <div class="p_box" style="background-image: url(imagenes/colonos.jpg); background-size: cover;"></div>
+                    </div>
+                    <%- include('./partials/cart_schema_1.ejs') %>
                 </div>
-                
-                
+                <div class="main_1_1">
+                    <div class="main_1_2">
+                        <div class="p_box" style="background-image: url(imagenes/book.jpg); background-size: cover;"></div>
+                    </div>
+                    <%- include('./partials/cart_schema_2.ejs') %>
+                </div>
 
 
             </div>
@@ -64,14 +55,11 @@
 
                     </div>
                     
-                    <button style="background-color: black; width: 10vw; float: right; border-radius: 5%;"><i style="color: red;">Comprar</i></button>
-                    <button>vaciar</button>
+                    <button style="background-color: black; width: 20vw; float: right; border-radius: 5%;"><i style="color: red;">Comprar</i></button>
                 </div>
             </div>
-            
 
         </main>
-        <script src="scrpits_js/addCart.js"></script>
         <%- include('./partials/footer.ejs') %> 
     </body>
 </html>
