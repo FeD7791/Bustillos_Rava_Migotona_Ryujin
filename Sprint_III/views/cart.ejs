@@ -11,59 +11,32 @@
         <main class="main">
             <div class="main_1"><!--Red-->
                 <div class="main_1_1">
-                    <div class="main_1_2">
-                        <div class="p_box" style="background-image: url(imagenes/challenger_deck.jpg); background-size: cover;"></div>
-                    </div>
-                    <div class="main_1_3">
-                        <div class="main_1_3_1">
-                            <div class="boton_container">
-                                <button><i class="fa-solid fa-minus"></i></button>
-                                <div class="display_box"></div>
-                                <button><i class="fa-solid fa-plus"></i></button>
-                            </div>
+                    
+                        <div class="main_1_2">
+                            <div class="p_box" style="background-image: url(imagenes/challenger_deck.jpg); background-size: cover;"></div>
+                            <%- include('./partials/cart_schema.ejs') %>
                         </div>
-                        <div class="main_1_3_1">
-                            <button><i class="fa-regular fa-heart"></i></button>
-                            <div class="main_1_3_1_price_display"></div>
+                    
+                    
+                        <div class="main_1_2">
+                            <div class="p_box" style="background-image: url(imagenes/colonos.jpg); background-size: cover;"></div>
+                            <%- include('./partials/cart_schema.ejs') %>
                         </div>
-                    </div>
+                    
+                    
+                        <div class="main_1_2">
+                            <div class="p_box" style="background-image: url(imagenes/book.jpg); background-size: cover;"></div>
+                            <%- include('./partials/cart_schema.ejs') %>
+                        </div>
+                    
+                    
                 </div>
-                <div class="main_1_1">
-                    <div class="main_1_2">
-                        <div class="p_box" style="background-image: url(imagenes/colonos.jpg); background-size: cover;"></div>
-                    </div>
-                    <div class="main_1_3">
-                        <div class="main_1_3_1">
-                            <div class="boton_container">
-                                <button><i class="fa-solid fa-minus"></i></button>
-                                <div class="display_box"></div>
-                                <button><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                        <div class="main_1_3_1">
-                            <button><i class="fa-regular fa-heart"></i></button>
-                            <div class="main_1_3_1_price_display"></div>
-                        </div>
-                    </div>
+                <div class="main_1_1_2_extra">
+                    
+
                 </div>
-                <div class="main_1_1">
-                    <div class="main_1_2">
-                        <div class="p_box" style="background-image: url(imagenes/book.jpg); background-size: cover;"></div>
-                    </div>
-                    <div class="main_1_3">
-                        <div class="main_1_3_1">
-                            <div class="boton_container">
-                                <button><i class="fa-solid fa-minus"></i></button>
-                                <div class="display_box"></div>
-                                <button><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                        <div class="main_1_3_1">
-                            <button><i class="fa-regular fa-heart"></i></button>
-                            <div class="main_1_3_1_price_display"></div>
-                        </div>
-                    </div>
-                </div>
+                
+                
 
 
             </div>
@@ -95,8 +68,10 @@
                     <button>vaciar</button>
                 </div>
             </div>
+            
 
         </main>
+        <script src="scrpits_js/addCart.js"></script>
         <%- include('./partials/footer.ejs') %> 
     </body>
 </html>

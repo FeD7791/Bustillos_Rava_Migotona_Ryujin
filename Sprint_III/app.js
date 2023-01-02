@@ -9,6 +9,7 @@ app.set('views' , __dirname + '/views'); //Se fija una ruta dinamica (con __dirn
 //STATIC FILES
 app.use(express.static('public'))
 app.use('/css', express.static(__dirname + 'public/css'))
+app.use('/scripts_js', express.static(__dirname + 'public/scripts_js'))
 
 //Rutas de las vistas web
 app.use('/', require('./routes/rutas_web'))

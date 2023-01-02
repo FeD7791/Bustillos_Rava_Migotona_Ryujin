@@ -249,7 +249,7 @@ p{
     background-image: url('../imagenes/elf2.jpg');
     display: flex;
     width: 98%;
-    height: 800px;
+    /*height: 800px;*/
     /*border: solid red 2px;*/
 
 }
@@ -258,11 +258,20 @@ p{
     flex-direction: row;
     display: flex;
     width: 100%;
-    height: 33%;
+    height: 70%;
     /*border: solid yellow 2px;*/
 }
 
+.main_1_1_2_extra{
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 30%;
+    /*border: solid orange 2px;*/
+}
+
 .main_1_2{
+    flex-direction: column;
     width: 33%;
     height: 100%;
     /*border: solid blue 2px;*/
@@ -299,7 +308,7 @@ p{
     align-items: center;
     display: flex;
     width: 100%;
-    height: 49%;
+    height: 50px;
     /*border: solid black 2px;*/
 
 }
@@ -313,7 +322,7 @@ p{
 
 /*Button Box*/
 .boton_container{
-    width: 70%;
+    width: 100%;
     height: 70%;
     background-color: gray;
     flex-direction: row;
@@ -382,6 +391,23 @@ p{
     /*border: solid cyan 2px;*/
 }
 
+input {
+    overflow: hidden;
+    font-size: 30px;
+    outline: 1px dashed black;
+    border: 0;
+    outline-offset: -8px;
+    padding: 6px 0 2px 8px;
+    
+
+}
+/*remove arrows*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 /*******************************************FOOTER********Mobile*********************************/
 
 .footer_container {
