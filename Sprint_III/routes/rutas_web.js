@@ -7,9 +7,12 @@ const {create_user, user_session_validator, middleware_cookie,deleteOne} = requi
 
 const urlencoded = bodyparser.urlencoded({extended:false})
 router_web.use(bodyparser.json())//INDISPENSABLE PARA HACER POST EN JSON
+
+const fs = require('fs')
 //ESCRITORIO
 router_web.get('/' , (req,res)=>{
-    res.render('desktop_principal.ejs')
+    const productos =JSON.parse(fs.readFileSync('./database/products.json'));
+    res.render('desktop_principal.ejs', {productos})
     
 })
 
@@ -21,7 +24,9 @@ router_web.get('/detail_product', (req,res)=>{
 
 //CART
 router_web.get('/cart', (req,res)=>{
-    res.render('cart.ejs')
+    const productos =JSON.parse(fs.readFileSync('./database/products.json'));
+    
+    res.render('cart.ejs',{productos})
     
 })
 

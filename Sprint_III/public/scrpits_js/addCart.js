@@ -1,3 +1,5 @@
+//const fs = require('fs')
+import * as fs from 'fs'
 ///////////////////minus sign elements //////////////
 let less = document.getElementById("button_minus") 
 let less_1 = document.getElementById("button_minus_1") 
@@ -11,11 +13,17 @@ let box = document.getElementById("display_box")
 let box_1 = document.getElementById("display_box_1") 
 let box_2 = document.getElementById("display_box_2") 
 /////////////////////////////////////////////////////
+////////////////// load database ////////////////////
+//import fs from 'fs'
 
+
+const productos =JSON.parse(fs.readFileSync(__dirname + '/../database/products.json')) ;
+/////////////////////////////////////////////////////
 
 function incrementar(box_element){
     let box_0 = box_element
     box_0.stepUp()
+    //console.log(fs)
     //box.innerHTML = numero+1
 }
 

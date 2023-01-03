@@ -10,7 +10,18 @@
         <%- include('./partials/header.ejs') %> 
         <main class="main">
             <div class="main_1"><!--Red-->
-                <div class="main_1_1">
+
+                <% productos.forEach(element => { %>
+                    <div class="main_1_3_1">
+                        <button><i class="fa-regular fa-heart"></i></button>
+                        <!--
+                        <div class="main_1_3_1_price_display"></div>
+                        -->
+                        <h2>Total:<%= element.precio %> </h2>
+                        <p id="price_text"></p>
+                    </div>
+                <% }) %>
+                <!-- <div class="main_1_1">
                     <div class="main_1_2">
                         <div class="p_box" style="background-image: url(imagenes/challenger_deck.jpg); background-size: cover;"></div>
                     </div>
@@ -27,8 +38,8 @@
                         <div class="p_box" style="background-image: url(imagenes/book.jpg); background-size: cover;"></div>
                     </div>
                     <%- include('./partials/cart_schema_2.ejs') %>
-                </div>
-
+                </div> -->
+                <script src="./scrpits_js/addCart.js" type="module"></script>
 
             </div>
             <div class="main_2" style="background-image: url(imagenes/elf2.jpg); background-size: cover;">

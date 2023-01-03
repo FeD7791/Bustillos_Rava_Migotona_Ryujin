@@ -413,6 +413,10 @@ button:hover{
     background-size: cover;
 }
 
+.botones_der_2:hover{
+    border: solid red 2px;
+}
+
 .p_der_2{
     
     color: white;

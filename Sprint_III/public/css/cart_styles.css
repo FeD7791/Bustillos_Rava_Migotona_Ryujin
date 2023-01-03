@@ -671,6 +671,13 @@ p{
         /*border: solid cyan 2px;*/
     }
 
+    /*Hide arrows input*/
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
     /******************************************FOOTER***************DESKTOP****************************/
     .footer_container {
     
