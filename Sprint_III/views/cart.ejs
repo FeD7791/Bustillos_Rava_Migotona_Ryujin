@@ -9,39 +9,8 @@
     <body>
         <%- include('./partials/header.ejs') %> 
         <main class="main">
-            <div class="main_1"><!--Red-->
-
-                <% productos.forEach(element => { %>
-                    <div class="main_1_3_1">
-                        <button><i class="fa-regular fa-heart"></i></button>
-                        <!--
-                        <div class="main_1_3_1_price_display"></div>
-                        -->
-                        <h2>Total:<%= element.precio %> </h2>
-                        <p id="price_text"></p>
-                    </div>
-                <% }) %>
-                <!-- <div class="main_1_1">
-                    <div class="main_1_2">
-                        <div class="p_box" style="background-image: url(imagenes/challenger_deck.jpg); background-size: cover;"></div>
-                    </div>
-                    <%- include('./partials/cart_schema.ejs') %>
-                </div>
-                <div class="main_1_1">
-                    <div class="main_1_2">
-                        <div class="p_box" style="background-image: url(imagenes/colonos.jpg); background-size: cover;"></div>
-                    </div>
-                    <%- include('./partials/cart_schema_1.ejs') %>
-                </div>
-                <div class="main_1_1">
-                    <div class="main_1_2">
-                        <div class="p_box" style="background-image: url(imagenes/book.jpg); background-size: cover;"></div>
-                    </div>
-                    <%- include('./partials/cart_schema_2.ejs') %>
-                </div> -->
-                <script src="./scrpits_js/addCart.js" type="module"></script>
-
-            </div>
+            <div class="main_1"><!--Red--></div>
+            
             <div class="main_2" style="background-image: url(imagenes/elf2.jpg); background-size: cover;">
                 <i class="fa-brands fa-cc-paypal fa-2x" style="color: white; float:inline-end"></i>
             </div>
@@ -61,7 +30,7 @@
                 </div>
                 <div class="main_3_3">
                     <div style="flex-direction: row; align-items:center; display: flex; height: 50%; justify-content: space-around; width: 100%;">
-                        <h1>Total</h1>
+                        <h1 id="total_compra">Total</h1>
                         <div class="main_1_3_1_price_display"></div>
 
                     </div>
@@ -73,4 +42,6 @@
         </main>
         <%- include('./partials/footer.ejs') %> 
     </body>
+    <script src="./scrpits_js/addCart.js" type="module"></script>
+    
 </html>

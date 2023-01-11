@@ -9,8 +9,8 @@
         <%- include('./partials/header.ejs') %> 
         <main class="main_container">
             <div class="main_izquierda"><!--red-->
-                <h1 style="color: red;">Colonos de Catan</h1>
-                <div class="product_picture"></div><!--Imagen Producto-->
+                <h1 style="color: red;"><%= producto.nombre %> </h1>
+                <div class="product_picture" style="background-image: url('<%=producto.imagen %>');"></div><!--Imagen Producto-->
 
             </div>
             <div class="main_derecha">
@@ -29,17 +29,18 @@
                     
 
                     </div>
-                    <div class="detail_product">
-                        <h2 style="font-size: 3vw;">Disponibles</h2>
-                        <div class="boton_cantidad">
-                        <button style="width: 2vw; height:3vw; justify-content: center; display: flex;align-items: center;"><i class="fa-solid fa-circle-plus" style="font-size: 2vw;"></i></button>
-                        <div style="border: solid gray 2px; width: 10vw; height: 4vw; background-color: white;"></div>
-                        <button style="width: 2vw; height:3vw; justify-content: center; display: flex;align-items: center;"><i class="fa-solid fa-circle-minus" style="font-size: 2vw;"></i></button>
+                <div class="detail_product">
+                    <button id="add_button" style="font-size: 3vw;">Agregar</button>
+                    <div class="boton_cantidad">
+                        <button id="button_plus" style="width: 2vw; height:3vw; justify-content: center; display: flex;align-items: center;"><i class="fa-solid fa-circle-plus" style="font-size: 2vw;"></i></button>
+                        <input id="input_space" style="border: solid gray 2px; width: 7vw; height: 3vw; background-color: white;" value="0" min="0" type="number"></input>
+                        <button id="button_minus" style="width: 2vw; height:3vw; justify-content: center; display: flex;align-items: center;"><i class="fa-solid fa-circle-minus" style="font-size: 2vw;"></i></button>
+                        
                     </div>
 
                     <div class="boton_cart_money">
                         <div style="border: solid black 2px; width:5vw; height: 5vw; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-cart-shopping"></i></div>
-                        <div style="border: solid black 2px; width:13vw; height: 5vw; display: flex; justify-content: center; align-items: center;"><i class="fa-regular fa-dollar-sign"></i><p style="font-size: 2vw;">14.000</p></div>
+                        <div style="border: solid black 2px; width:13vw; height: 5vw; display: flex; justify-content: center; align-items: center;"><i class="fa-regular fa-dollar-sign"></i><p style="font-size: 2vw;"><%= producto.precio %> </p></div>
                     
                     </div>
 
@@ -57,7 +58,7 @@
 
             </div><!--blue-->
             <div class="main_derecha_b"><!--brown-->
-                <p class="p_letra">Tus aventureros colonos buscan domar la remota pero rica isla de Catán. Comienza revelando los numerosos puertos y regiones de Catan: pastos, campos, montañas, colinas, bosques y desierto. La mezcla aleatoria crea un tablero diferente prácticamente en cada partida. ¡No hay dos partidas iguales! Embárcate en una aventura para colonizar la isla de Catán. Guía a tus colonos hacia la victoria mediante un comercio inteligente y un desarrollo astuto. Utiliza combinaciones de recursos (grano, lana, mineral, ladrillo y madera) para comprar útiles cartas de desarrollo y construir carreteras, asentamientos y ciudades. Adquiere tus recursos mediante intercambios, cartas o dados de la suerte (incluso fuera de tu turno). Pero ten cuidado: alguien puede cortar tu camino o comprar un monopolio. Y nunca se sabe cuándo el astuto ladrón puede robarte algunas de tus preciadas ganancias</p>
+                <p class="p_letra"><%= producto.descripcion %> </p>
 
             </div>
 
@@ -68,5 +69,37 @@
         <%- include('./partials/footer.ejs') %> 
         
     </body>
+    <script src="./scrpits_js/detail_product.js"></script>
+    <script >
+        const add_button = document.getElementById("add_button")
+
+    
+
+
+
+
+        
+        let the_product = '<%- JSON.stringify(producto)  %>';
+        const the_product_2 = JSON.parse(the_product)
+        
+        
+        function add(){
+        //input_space defined in the other script tag
+        if(input_space.value >= 1){
+            the_product_2.cantidad = input_space.value
+            let product = JSON.stringify(the_product_2)
+            localStorage.setItem("<%- producto.id %>",product)
+            console.log(product)
+        }else{
+            alert("No hay productos")
+            
+        }
+        
+        }
+        add_button.addEventListener("click",add)
+    </script> 
+
+    
+    
  
 </html>

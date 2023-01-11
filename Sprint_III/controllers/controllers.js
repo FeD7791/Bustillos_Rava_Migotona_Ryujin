@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser')
 const{sequelize} = require('sequelize');
 const usuarios = require('../models').usuarios
 const productos = require('../models').productos
+const fs = require('fs')
 
 
 ////////////////////////////////////////////////////PRODUCTOS
@@ -112,5 +113,9 @@ const deleteOne =  (req, res) => {
     .then(usuarios => res.status(201).send(usuario))
     .catch(error => res.status(500).send(error))
 }
+
+
+
+
 
 module.exports = {getall,getone,create_user,user_session_validator,middleware_cookie,deleteOne,create_product,delete_product}

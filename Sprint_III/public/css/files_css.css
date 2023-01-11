@@ -447,8 +447,8 @@ button:hover{
     justify-content: right;
     border: solid black 2px;
     border-radius: 10%;
-    height: 50px;
-    width: 150px;
+    height: 10vw;
+    width: 20vw;
     background-color: gray;
     
 
@@ -792,12 +792,13 @@ button:hover{
     flex-direction: row;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
     border: solid black 2px;
     border-radius: 20px;
     height: 5vw;
     width: 10vw;
     background-color: gray;
+    
     
 
 }

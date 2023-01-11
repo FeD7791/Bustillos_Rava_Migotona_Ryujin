@@ -11,7 +11,7 @@
             <div class="main_container_izq">
                 <h1 style="color: white;"><p style="font-size: 3vw;">Categorias</p></h1>
             <div class="main_container_izq_2">
-            <button class="botones"><p style="font-size: 2vw;">Juegos de Mesa</p></button><!--boton juegos de mesa-->
+            <button class="botones" id="boton23"><p style="font-size: 2vw;">Juegos de Mesa</p></button><!--boton juegos de mesa-->
             <button class="botones"><p style="font-size: 2vw;">TCG</p></button><!--boton tcg-->
             <button class="botones"><p style="font-size: 2vw;">Libros de Terror</p></button><!--boton libros de terror-->
             <button class="botones"><p style="font-size: 2vw;">Manga</p></button><!--boton manga-->
@@ -22,12 +22,29 @@
             <div class="main_container_der_2">
                 <% productos.forEach(element => { %>
                     <div class="main_container_der_3"><!--Listado de productos , un producto en cada div-->
-                        <div><p class="p_der_2"><%= element.nombre %> </p></div><!--titulo-->
+                        <div><p class="p_der_2" id="<%= element.id %>"> <%= element.nombre %> </p></div><!--titulo-->
                         <button class="botones_der_2" style="background-image: url('<%=element.imagen %>');"></button><!--picture-->
                         
-                        <div class="items_price"><i class="fa-solid fa-circle-dollar"></i>14.000</div><!--price-->
+                        
+                        
+                        <form action="/detail_product" method="get" >
+                        
+                        
+
+                        <input type="hidden" name="id" value="<%= element.id %>" >
+                        <input type="hidden" name="nombre" value="<%= element.nombre %>" >
+                        <input type="hidden" name="descripcion" value="<%= element.descripcion %>" >
+                        <input type="hidden" name="precio" value="<%= element.precio %>" >
+                        <input type="hidden" name="imagen" value="<%= element.imagen %>" >
+
+                        <input type="submit" value="comprar">
+                        </form>
+                        <div class="items_price"><i class="far fa-dollar-sign"></i><%= element.precio %> </div><!--price-->
                     </div>
+                    
                 <% }) %>
+                
+                
 
                 
 
@@ -41,5 +58,6 @@
         <%- include('./partials/footer.ejs') %> 
         
     </body>
+    
  
 </html>

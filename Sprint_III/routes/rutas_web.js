@@ -3,12 +3,15 @@ const router_web = express.Router();
 const bodyparser = require('body-parser');
 const bcrypt = require('bcrypt')
 const { check, validationResult} = require('express-validator');
+const cookieParser = require('cookie-parser');
+
 const {create_user, user_session_validator, middleware_cookie,deleteOne} = require('../controllers/controllers') 
 
 const urlencoded = bodyparser.urlencoded({extended:false})
 router_web.use(bodyparser.json())//INDISPENSABLE PARA HACER POST EN JSON
 
 const fs = require('fs')
+router_web.use(cookieParser());
 //ESCRITORIO
 router_web.get('/' , (req,res)=>{
     const productos =JSON.parse(fs.readFileSync('./database/products.json'));
@@ -16,11 +19,19 @@ router_web.get('/' , (req,res)=>{
     
 })
 
+
 //DETAIL PRODUCT
 router_web.get('/detail_product', (req,res)=>{
-    res.render('producto.ejs')
+    const producto = req.query
+    
+    res.render('producto.ejs',{producto})
+    
     
 })
+
+// router_web.post('/detail_product',(req,res)=>{
+//     console.log(req.body)
+// })
 
 //CART
 router_web.get('/cart', (req,res)=>{

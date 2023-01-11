@@ -351,9 +351,11 @@ p{
 
 .main_derecha{
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     display: flex;
     height: 48%;
-    
+    /* border: solid red 3px; */
 }
 
 .main_derecha_a{
@@ -379,7 +381,7 @@ p{
 }
 
 .product_picture{
-    background-image: url(../imagenes/colonos.jpg);
+    /* background-image: url(../imagenes/colonos.jpg); */
     background-size: cover;
     border: solid black 2px;
     border-radius: 10%;
@@ -467,7 +469,7 @@ p{
 .boton_cantidad{
     flex-direction: row;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     border: solid black 2px;
     height: 5vw;
@@ -478,9 +480,10 @@ p{
 
 .detail_product{
     flex-direction: column;
+    justify-content: center;
     display: flex;
     align-items: center;
-    /*border: solid pink 3px;*/
+    /* border: solid pink 3px; */
     height: 100%;
     margin: 0;
     width: 32%;
@@ -852,7 +855,12 @@ p{
 }
 
 
-
+  /*Hide arrows input*/
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
 
 
 
