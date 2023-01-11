@@ -9,8 +9,21 @@ window.addEventListener('load', loader)
                 
             }
         }
+        /////////Total compra////////////////////////////////
+        let total_compra =document.getElementById("total_compra")
+
+        ////////////////////////////////////// Funcion que modifica el precio total
+        function precio_total_tag(){
+            let precio_total = 0
+            for(let k = 0; k< product_array.length ; k++ ){
+                precio_total = precio_total + Number(product_array[k].cantidad)*Number(product_array[k].precio)
+            }
+            return precio_total
+        }
+        let precio_total = precio_total_tag()
+        total_compra.innerText = String(precio_total)
         
-        
+        ///////////////////////////////////////////////////////
         
         for(let j=0 ; j < product_array.length ; j++){
             ///////////////////////////////////////////////////////
@@ -44,6 +57,7 @@ window.addEventListener('load', loader)
             const id_tag_main_1_2 = String(product_array[j].id) 
             const id_tag_main_1_1 = String(product_array[j].nombre)
             /////////////////////////////////////////////////////////////
+
             
             
             
@@ -73,12 +87,15 @@ window.addEventListener('load', loader)
             button_delete_tag.addEventListener("click",()=>{
                 const item = button_delete_tag.parentNode.parentNode.firstChild.id
                 
-                console.log(item)
+                
                 delete_item(item);
                 location.reload();
             })
             function delete_item(arg){
                 localStorage.removeItem(arg)
+                /////////////////////Modify total price ///////////////////////////
+                let precio_total = precio_total_tag()
+                total_compra.innerText = String(precio_total)
             }
             ////////////////////////// Editar cantidad del producto /////////////////////////////////////
             button_plus_tag.addEventListener("click",add_item)
@@ -94,6 +111,9 @@ window.addEventListener('load', loader)
                 //////////////////////////////////////////////////////////////////////////////////////////
                 element_p_tag.textContent = product_array[j].nombre + ' x ' + product_array[j].cantidad;
                 element_p_tag_2.textContent = 'Total: ' + product_array[j].cantidad * product_array[j].precio; 
+                //////////////////////////////Precio total////////////////////////////////////////
+                let precio_total = precio_total_tag()
+                total_compra.innerText = String(precio_total)
             }
             
             function substract_item(){
@@ -105,7 +125,8 @@ window.addEventListener('load', loader)
                 //////////////////////////////////////////////////////////////////////////////////////////
                 element_p_tag.textContent = product_array[j].nombre + ' x ' + product_array[j].cantidad;
                 element_p_tag_2.textContent = 'Total: ' + product_array[j].cantidad * product_array[j].precio;
-
+                let precio_total = precio_total_tag()
+                total_compra.innerText = String(precio_total)
                 }
                 
             }

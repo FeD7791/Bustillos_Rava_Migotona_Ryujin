@@ -313,6 +313,9 @@ p{
 }
 
 .main_1_3_1_price_display{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 4vh;
     border: solid black 2px;
     height: 70%;
     width: 50%;
