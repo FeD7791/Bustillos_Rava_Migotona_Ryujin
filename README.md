@@ -22,3 +22,9 @@
 -Al hacer click en algun producto en particular se va a la pagina *'/detail_product'* cuya funcionalidad es hacer un display completo del producto. En concreto lo que esta  sucediendo es que al hacer click en algun producto en '/' estamos llenando un formulario (cuyos campos estan ocultos), los inputs son los elementos del objeto de ese producto. La informacion enviada se muestra en la URL del sitio.
 
 ![detail_product](imagenes_repo/detail_product.png)
+
+### Elementos relevantes detail_product
+-La vista de la pagina se encuentra en: Sprint_v_trabajo_II/views/producto.ejs<br />
+-Esta vista utiliza dos scripts, uno dentro de la misma vista y otra en un archivo externo
+-El script del archivo externo (Sprint_v_trabajo_II/public/scrpits_js/detail_product.js) simplemente controla el incremento y decremento del boton para agregar items. Se encuentra incorporado en la linea 72 de producto.ejs<br />
+-El script interno empieza en la linea 73 de rpoducto.ejs . Su funcion es gestionar el boton para agregar elementos, si la cantidad de elmentos es mayor a 0 se agrega al objeto del producto una propiedad denominada *cantidad* cuyo valor es el correspondiente a la cantidad en el display del boton para agregar o quitar elementos. Ademas se genera una alerta que indica si hay o no hay elementos. Finalmente se crea un LocalStorage con los detalles del producto.<br />
