@@ -48,6 +48,10 @@ Linea 28: Ciclo que genera una estructura HTML para el display de los distintos 
 
 ![explained_cart](imagenes_repo/explained_cart.png)
 
+Linea 86: Script para borrar el producto del LocalStorage a traves de pulsar el boton de Eliminar producto. Al pulsarse el mismo se borra el producto del localstorage y se recarga la pagina. Se actualiza tambien el precio total<br/>
+Linea 100: Script para actualizar el producto. Esto tambien actualiza las cantidades en los localstorage y tambien actualiza el total del precio.
+
+
 
 ---
 
