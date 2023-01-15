@@ -46,7 +46,7 @@ Linea 16: Funcion que calcula el precio total de todos los productos en el carri
 Linea 24: Display del precio total en el elemento de precio total (Inicial)<br />
 Linea 28: Ciclo que genera una estructura HTML para el display de los distintos productos. Tambien contiene funciones creadas para cada producto que editan la cantidad o bien eliminan el producto<br />
 
-![detail_product](imagenes_repo/explained_cart.png)
+![explained_cart](imagenes_repo/explained_cart.png)
 
 
 ---
