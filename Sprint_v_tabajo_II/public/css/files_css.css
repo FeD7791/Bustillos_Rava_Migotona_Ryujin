@@ -379,7 +379,7 @@ button:hover{
     display: flex;
     
     width: 0;
-    
+    overflow-y: auto;
     /*background-image: url(imagen.jpg);
     background-size: cover;*/
     visibility: hidden;
