@@ -11,10 +11,10 @@
 
 ### Elementos relevantes desktop
 
--La vista de esta pagina se encuentra en: Sprint_v_trabajo_II/views/desktop_principal.ejs
--Linea 23: Carga de objetos utilizando backend y ejs
--Linea 26: Principio del Formulario
--Lineas 35 a 39: Inputs de formulario
+-La vista de esta pagina se encuentra en: Sprint_v_trabajo_II/views/desktop_principal.ejs<br />
+-Linea 23: Carga de objetos utilizando backend y ejs<br />
+-Linea 26: Principio del Formulario<br />
+-Lineas 35 a 39: Inputs de formulario<br />
 
 
 ![desktop](imagenes_repo/desktop.png)
