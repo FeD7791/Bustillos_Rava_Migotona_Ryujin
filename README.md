@@ -9,4 +9,6 @@
 
 ![desktop](imagenes_repo/desktop.png)
 
--Al hacer click en algun producto en particular se va a la pagina '/detail_product' cuya funcionalidad es hacer un display 
+-Al hacer click en algun producto en particular se va a la pagina *'/detail_product'* cuya funcionalidad es hacer un display completo del producto. En concreto lo que esta  sucediendo es que al hacer click en algun producto en '/' estamos llenando un formulario (cuyos campos estan ocultos), los inputs son los elementos del objeto de ese producto. Al hacer click en el producto estamos haciendo un submit del formulario. La informacion se envia por la URL que aparecera en la direccion *'/detail_product'*.
+
+![detail_product](imagenes_repo/detail_product.png)
