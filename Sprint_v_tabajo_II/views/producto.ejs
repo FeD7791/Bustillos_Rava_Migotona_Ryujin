@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="boton_cart_money">
-                        <div style="border: solid black 2px; width:5vw; height: 5vw; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <button class="cart_button" style="width:5vw; height: 5vw; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-cart-shopping"></i></button>
                         <div style="border: solid black 2px; width:13vw; height: 5vw; display: flex; justify-content: center; align-items: center;"><i class="fa-regular fa-dollar-sign"></i><p style="font-size: 2vw;"><%= producto.precio %> </p></div>
                     
                     </div>
@@ -89,7 +89,7 @@
             the_product_2.cantidad = input_space.value
             let product = JSON.stringify(the_product_2)
             localStorage.setItem("<%- producto.id %>",product)
-            console.log(product)
+            alert('Producto Agregado')
         }else{
             alert("No hay productos")
             

@@ -17,6 +17,12 @@
 
 }
 
+.cart_button:hover{
+    /* background-color: transparent; */
+    border: solid red 2px;
+    
+}
+
 
 
 .header_container0 {
