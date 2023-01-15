@@ -7,4 +7,6 @@
 ## Funcionalidad
 -Primero hay que ir al Desktop principal (raiz '/' del proyecto en el *http://localhost:3000/*) En la vista de desktop solamente (me falta ver como hago en mobile), se cargan desde el backend una lista de productos que contienen objetos con la id, nombre, descripcion, precio , url de imagen.
 
+![desktop](imagenes_repo/desktop.png)
+
 -Al hacer click en algun producto en particular se va a la pagina '/detail_product' cuya funcionalidad es hacer un display 
