@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/68bc1fc849.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="css/styles_create_account.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include('./partials/header.ejs') %> 
+    <main class="main">
+        <div class="main_izq"></div>
+        <div class="formulario">
+            <div class="form_header">
+                <h1>Crear Cuenta</h1>
+                <button style="border-radius: 10px;"><i class="fa-brands fa-facebook fa-2x" style="color: blue;"></i></button>
+                <button style="border-radius: 10px;"><i class="fa-brands fa-google fa-2x" style="color: red;"></i></button>
+
+            </div>
+            <form id="form_crear_ceunta" class="formulario" action="/register" method="post">
+                
+                <fieldset name="datos_creacion_cuenta" class="formulario">
+                    <input type="text" id="name" name="nombre" placeholder="Nombre" class="input_style">
+                    <p id="log_name"></p>
+                    <input type="text" id="last_name" name="apellido" placeholder="Apellido" class="input_style">
+                    <p id="log_apellido"></p>
+                    <input type="email" id="email" name="correo" placeholder="Email" class="input_style">
+                    <p id="log_correo"></p>
+                    <input type="date" id="birthdate" name="fecha_de_nacimiento" placeholder="Fecha de Nacimiento" class="input_style">
+                    <p id="log_f_nacimiento"></p>
+                    <input type="password" id="pwd" name="contrasenia" placeholder="Contraseña" class="input_style">
+                    <p id="log_contrasenia"></p>
+                    <p id="log_contrasenia2"></p>
+                </fieldset>
+                <input type="submit" value="Crear Cuenta" class="ingresar_button">
+            </form>
+            <script src="../scrpits_js/script.js"></script>
+            <% if(typeof validaciones != 'undefined') { %>
+                <% validaciones.forEach( (validaciones)=> { %>
+                <div class="alert alert-primary" role="alert">
+                    <strong><%= validaciones.msg %></strong>
+                </div>
+                <% }) %>
+              <% } %>
+        </div>
+        <div class="main_der"></div>
+    </main>
+    <%- include('./partials/footer.ejs') %> 
+    
+</body>
+</html>
