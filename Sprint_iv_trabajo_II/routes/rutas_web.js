@@ -77,7 +77,7 @@ router_web.post('/register',urlencoded,[
 router_web.post('/login',urlencoded,user_session_validator)
 
 //Cookies for logged user
-router_web.get('loged_user',)
+router_web.get('loged_user',middleware_cookie)
 
 //Borrar cuenta
 router_web.delete('/usuarios/:id', deleteOne)
