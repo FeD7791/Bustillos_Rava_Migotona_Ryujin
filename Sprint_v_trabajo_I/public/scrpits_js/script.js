@@ -75,18 +75,18 @@ function stopper(event){
     let regex_clave = /\d/
     let regex_email = /(@|.com)/g
     ///////////////////////////////////////////////
-    let bolean_regex = regex_clave.test(clave_user)
+    let bolean_regex = regex_clave.test(clave_user.value)
     let bolean_user = false;
     let bolean_clave = false;
-    let bolean_email = regex_email.test(correo_user)
+    let bolean_email = regex_email.test(correo_user.value)
     ///////////////////////////////////////////////
     
-    if(nombre_user.length > 5){bolean_user = true}
-    if(clave_user.length >8){bolean_clave = true}
+    if(nombre_user.value.length > 5){bolean_user = true}
+    if(clave_user.value.length >8){bolean_clave = true}
     ///////////////////////////////////////////////
     
     let final_bolean = bolean_user && bolean_clave && bolean_regex && bolean_email
-
+    
 
     if(!final_bolean){
       
