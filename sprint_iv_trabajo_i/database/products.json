@@ -1,0 +1,33 @@
+[
+    {
+        "id":1,
+        "nombre":"Colonos de catan",
+        "descripcion":"un excelente juego de mesa para cuatro jugadores",
+        "precio": 10000
+    },
+    {
+        "id":2,
+        "nombre":"Mazo de cartas Magic",
+        "descripcion":"Mazo de 60 cartas listas para jugar",
+        "precio": 7000
+    },
+    {
+        "id":3,
+        "nombre":"Relatos de Lovecraft",
+        "descripcion":"Libro de relatos de Horror",
+        "precio": 5000
+    },
+    {
+        "id":4,
+        "nombre":"Seven Wonders",
+        "descripcion":"un excelente juego de mesa para siete jugadores",
+        "precio": 12000
+    },
+    {
+        "id":5,
+        "nombre":"Bariesius",
+        "descripcion":"un excelente juego de mesa para cuatro jugadores",
+        "precio": 8000
+    }
+
+]
