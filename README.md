@@ -1,4 +1,4 @@
-# Sprin V Trabajo II
+# Sprint V Trabajo II
 
 ## Visualizacion
 -Para poder visualizar el proyecto hay que descargar el repositorio Bustillos_Rava_Migotona_Ryujin , descargar las ramas y cambiar a la rama sprint_v_trabajo_II
