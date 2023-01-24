@@ -1,0 +1,45 @@
+
+<html>
+    
+    
+    <body>
+        
+        
+        <main class="main">
+            <div class="main_izq"></div>
+            <div class="formulario">
+                <div class="form_header">
+                    <h1>Crear Cuenta</h1>
+                    <button style="border-radius: 10px;"><fa-icon [icon]="fafacebook" style="color: blue" size="2x"></fa-icon></button>
+                    <button style="border-radius: 10px;"><fa-icon [icon]="fagoogle" style="color: red" size="2x"></fa-icon></button>
+    
+                </div>
+                <form id="form_crear_ceunta" class="formulario"  method="post" [formGroup]="formulario" (ngSubmit)="onsubmit()">
+                    
+                    <fieldset name="datos_creacion_cuenta" class="formulario">
+                        <input type="text" id="name" name="nombre" placeholder="Nombre" class="input_style" formControlName="name" >
+                        <p id="log_name" style="font-size: 10px;color: red;"></p>
+                        <input type="text" id="last_name" name="apellido" placeholder="Apellido" class="input_style" formControlName="lastname">
+                        <p id="log_apellido" style="font-size: 10px;color: red;"></p>
+                        <input type="email" id="email" name="correo" placeholder="Email" class="input_style" formControlName="email">
+                        <p id="log_correo" style="font-size: 10px;color: red;"></p>
+                        <input type="date" id="birthdate" name="fecha_de_nacimiento" placeholder="Fecha de Nacimiento" class="input_style" formControlName="bdate">
+                        <p id="log_f_nacimiento" style="font-size: 10px;color: red;"></p>
+                        <input type="password" id="pwd" name="contrasenia" placeholder="Contraseña" class="input_style" formControlName="key">
+                        <p id="log_contrasenia" style="font-size: 10px;color: red;"></p>
+                        <p id="log_contrasenia2" style="font-size: 10px;color: red;"></p>
+                    </fieldset>
+                    <input type="submit" value="Crear Cuenta" class="ingresar_button">
+                </form>
+                
+            </div>
+            <div class="main_der"></div>
+        </main>
+        
+        
+        
+    </body>
+    
+    
+    
+    </html>
