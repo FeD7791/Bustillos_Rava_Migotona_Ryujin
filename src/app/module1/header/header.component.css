@@ -1,3 +1,29 @@
+/* ***Otros*** */
+@font-face {
+    font-family: myFirstFont;
+    src: url(../../public/fonts/Silkscreen-Bold.ttf);
+    
+}
+
+@font-face {
+   
+    font-family: second_font;
+    src: url(../../public/fonts/DynaPuff-Bold.ttf);
+    
+}
+
+
+.fonts{
+    font-family: myFirstFont;
+}
+
+html *{
+    font-family: second_font;
+    
+    
+}
+
+
 
 
 .topnav{
@@ -73,29 +99,7 @@
 
 
 
-@font-face {
-    font-family: myFirstFont;
-    src: url(../../public/fonts/Silkscreen-Bold.ttf);
-    
-}
 
-@font-face {
-   
-    font-family: second_font;
-    src: url(../../public/fonts/DynaPuff-Bold.ttf);
-    
-}
-
-
-.fonts{
-    font-family: myFirstFont;
-}
-
-html *{
-    font-family: second_font;
-    
-    
-}
 
 
 
@@ -238,7 +242,7 @@ p{
 
 
 
-
+/**DESKTOP**/
 @media only screen and (min-width: 600px){
 
    
@@ -319,8 +323,10 @@ p{
 
 .hi1{
     
+    
 
-    height: 33.33%;
+    height: 200px;
+    /* border: solid yellow 2px; */
     
 }
 
