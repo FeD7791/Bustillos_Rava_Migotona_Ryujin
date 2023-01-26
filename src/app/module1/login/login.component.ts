@@ -3,6 +3,7 @@ import { AuthService, token_user } from '../auth.service';
 import { FormGroup, FormControl} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { pipe } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -50,17 +51,23 @@ export class LoginComponent implements OnInit {
 
   button_login_trigger(){
     
+
+
+
+
     this.URL_login = this.url_builder().URL
     this.email_user = this.url_builder().email
     this.key_user = this.url_builder().key
-
+    
     this.http.get<token_user>(this.URL_login).subscribe((obser)=>{this.token_obj = obser.token
-    this.auth.setUser('token',this.email_user+obser.token)
+    this.auth.setUser(this.email_user+obser.token)
     })
     
     
     
   }
+
+  
 
   
   

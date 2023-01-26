@@ -59,9 +59,10 @@ export class AuthService {
 
   }
 
-  setUser(email:string, token:string){
-
-    this.cookie.set(email,token,{expires:new Date(new Date().getTime() +  1000*60*60)})//set cookie for 2 seconds
+  setUser(token:string){
+    //todas las cookies llevan por nombre token
+    this.cookie.set('token',token,{expires:new Date(new Date().getTime() +  1000*60*60)})//set cookie for 1 hour
+    location.reload()//reloads page
   }
 
   getUserLogged(){//Esta funcion debe implementarse al iniciar cada componente en ngOnInit(){}
@@ -83,6 +84,11 @@ export class AuthService {
     }
 
 
+  }
+
+  logOut(){
+    this.cookie.delete('token')
+    location.reload()
   }
 
   

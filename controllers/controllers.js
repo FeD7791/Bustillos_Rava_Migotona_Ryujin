@@ -76,8 +76,15 @@ const get_user = async(req,res)=>{
 const validate_token = async(req,res)=>{
     const token = req.body
     const usuario = await usuarios.findOne({where: {email:token[0]}})
+    
     if(usuario != null){
-        res.status(200).send({user: usuario.name,user_email:usuario.email})
+        
+        if(token[1]==usuario.key){
+            res.status(200).send({user: usuario.name,user_email:usuario.email})
+        }else{
+            res.status(404)
+        }
+        
 
     }else{
         res.status(404)
