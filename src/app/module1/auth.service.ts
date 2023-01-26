@@ -90,6 +90,7 @@ export class AuthService {
     this.cookie.delete('token')
     location.reload()
   }
+  
 
   
 

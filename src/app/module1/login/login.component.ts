@@ -3,7 +3,7 @@ import { AuthService, token_user } from '../auth.service';
 import { FormGroup, FormControl} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { pipe } from 'rxjs';
+
 
 @Component({
   selector: 'app-login',
