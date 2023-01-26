@@ -42,27 +42,17 @@ export class LoginComponent implements OnInit {
 
   
 
-  url_builder(){
-    const email = this.login_form.controls['email'].value
-    const key = this.login_form.controls['key'].value
-    const URL ='http://localhost:3000/usuarios/'+email+'/'+key
-    return {email,key,URL}
-  }
+  
 
   button_login_trigger(){
     
+    const email = this.login_form.controls['email'].value
+    const key = this.login_form.controls['key'].value
 
 
 
-
-    this.URL_login = this.url_builder().URL
-    this.email_user = this.url_builder().email
-    this.key_user = this.url_builder().key
     
-    this.http.get<token_user>(this.URL_login).subscribe((obser)=>{this.token_obj = obser.token
-    this.auth.setUser(this.email_user+obser.token)
-    })
-    
+    this.auth.login(email,key)
     
     
   }

@@ -26,15 +26,17 @@ export class AuthService {
 
   
   
+  private email_user:string
+
   private myobservable$:Observable<token_user> 
   //User parameterss
   public user:user_parameters = {user: 'anonimo', email: ' '}
   
   private myobserver = {
     
-    next: (x:token_user) => {return x
-      
-    }
+    next: (x:token_user) => {
+    
+    this.setUser(this.email_user+x.token)}
     
     // err: (err:HttpErrorResponse) => {console.log(err.error())
     // }
@@ -50,7 +52,13 @@ export class AuthService {
     
   }
 
-  login(email:string,key:string,URL_login:string){
+  login(email:string,key:string){
+    
+    //URL Builder////////////////
+    const URL_login ='http://localhost:3000/usuarios/'+email+'/'+key
+
+    this.email_user = email//cargo email_user con email para utilizarlo en myobserver
+
     this.myobservable$ = this.http.get<token_user>(URL_login) //Set the observable
     this.myobservable$.subscribe(this.myobserver)
    
