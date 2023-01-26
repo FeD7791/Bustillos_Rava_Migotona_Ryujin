@@ -36,6 +36,7 @@ export class Service1Service {
   public URL: string
   public URL_all_users: string
   
+  
   observer = {
     next: (x:form_elements) => {console.log("formulario enviado " + x)}
   }
@@ -48,6 +49,7 @@ export class Service1Service {
 
     this.URL = 'http://localhost:3000/register'
     this.URL_all_users = 'http://localhost:3000/usuarios/'
+    
     
 
   }

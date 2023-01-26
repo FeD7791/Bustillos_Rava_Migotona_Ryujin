@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 ///////////////////// Servicios ////////////////////////////////////////
 import { Service1Service } from './service1.service';
+import { AuthService } from './auth.service';
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -9,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import {  FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
+
 
 ///////////////////////Componentes//////////////////////////////////////
 import { FooterComponent } from './footer/footer.component';
@@ -29,7 +31,8 @@ import { LoginComponent } from './login/login.component';
     LoginComponent
   ],
   providers: [
-    Service1Service
+    Service1Service,
+    AuthService
   ],
   imports: [
     CommonModule,

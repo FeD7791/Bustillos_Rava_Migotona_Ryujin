@@ -2,6 +2,8 @@ const bcrypt = require('bcrypt')
 const usuarios = require('../models').usuarios
 
 
+
+
 //////////////////////////////////////////////USUARIOS
 
 //Crear usuario
@@ -48,16 +50,42 @@ const getall = async(req,res)=>{
 
 }
 
-//Obtener usuario
+//Obtener usuario y generar token
 const get_user = async(req,res)=>{
-    const {id} = req.params
-    const usuario = await usuarios.findOne({where: {id:id}})
-    if(usuario == null){
-        res.sendStatus(404)
+    const {email,key} = req.params
+    const usuario = await usuarios.findOne({where: {email:email}})
+    let compare = bcrypt.compareSync(key,usuario.key) // compare two keys get a boolean
+    
+
+
+    if(usuario != null && compare){
+        
+        const token_user = String(usuario.key)
+        res.status(200).json({token: token_user  })
+        return usuario
+        
     }else{
-        res.sendStatus(200)
+        res.status(404).send("El usuario no se encuentra registrado")
+        
+    }
+    
+    
+}
+
+//Validar token
+const validate_token = async(req,res)=>{
+    const token = req.body
+    const usuario = await usuarios.findOne({where: {email:token[0]}})
+    if(usuario != null){
+        res.status(200).send({user: usuario.name,user_email:usuario.email})
+
+    }else{
+        res.status(404)
     }
 }
 
 
-module.exports = {create_user,delete_user,get_user,getall}
+
+
+
+module.exports = {create_user,delete_user,get_user,getall,validate_token}

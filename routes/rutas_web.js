@@ -1,7 +1,7 @@
 const express = require('express');
 const router_web = express.Router();
 const bodyparser = require('body-parser');
-const {create_user, delete_user, get_user, getall} = require('../controllers/controllers')
+const {create_user, delete_user, get_user, getall, validate_token} = require('../controllers/controllers')
 const cors = require('cors')
 
 const urlencoded = bodyparser.urlencoded({extended:false})
@@ -19,6 +19,9 @@ router_web.delete('/usuarios/:id', delete_user)
 router_web.get('/usuarios/',getall)
 
 //Obtener usuario
-router_web.get('/usuarios/:id',get_user)
+router_web.get('/usuarios/:email/:key',get_user)
+
+//Validacion token
+router_web.post('/validate',validate_token)
 
 module.exports = router_web
