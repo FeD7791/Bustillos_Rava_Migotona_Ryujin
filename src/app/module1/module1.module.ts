@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 
 ////////////////////////////////////////////////////////////////////////
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -18,7 +19,11 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { CrudService } from './crud.service';
 
 
-
+const routes: Routes = [
+  { path: 'productdetail', component: ProductDetailComponent },
+  { path: 'addproduct', component: AddProductComponent },
+  { path: 'productlist', component: ProductListComponent }
+];
 
 
 @NgModule({
@@ -39,8 +44,9 @@ import { CrudService } from './crud.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    RouterModule.forRoot(routes)//routes
   ],
-  exports: [FooterComponent,HeaderComponent,AddProductComponent,ProductDetailComponent,ProductListComponent]
+  exports: [FooterComponent,HeaderComponent,AddProductComponent,ProductDetailComponent,ProductListComponent,RouterModule]//export routes
 })
 export class Module1Module { }

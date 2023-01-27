@@ -7,6 +7,7 @@ import { Module1Module } from "./module1/module1.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
+
 @NgModule({
     declarations: [
         AppComponent

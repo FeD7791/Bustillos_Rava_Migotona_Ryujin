@@ -19,7 +19,7 @@
     font-family: myFirstFont;
 }
 
-html *{
+.footer_container *{
     font-family: second_font;
     
     
@@ -45,6 +45,8 @@ html *{
     justify-content: space-between;
     
     width: 100%;
+    bottom: 0;
+    position: fixed; 
     
 }
     
@@ -139,7 +141,8 @@ html *{
     height: 200px;
     
     flex-wrap: wrap;
-    
+    bottom: 0;
+    position: fixed; 
     
     
     

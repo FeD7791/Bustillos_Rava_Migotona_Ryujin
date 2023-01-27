@@ -59,7 +59,7 @@ const update_product = async (req,res) => {
     console.log(parsed_nombre)
     switch(field){
         case 'descripcion':
-            await productos.update(//upsert single row 
+            await productos.update(
                 {
                     descripcion:new_field_input
                 },
