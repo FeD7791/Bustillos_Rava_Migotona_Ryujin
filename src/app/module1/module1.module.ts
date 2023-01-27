@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-///////////////////// Servicios ////////////////////////////////////////
-
-
 
 ////////////////////////////////////////////////////////////////////////
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -16,6 +13,9 @@ import { HeaderComponent } from './header/header.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductListComponent } from './product-list/product-list.component';
+
+///////////////////// Servicios ////////////////////////////////////////
+import { CrudService } from './crud.service';
 
 
 
@@ -31,7 +31,7 @@ import { ProductListComponent } from './product-list/product-list.component';
     
   ],
   providers: [
-    
+    CrudService
   ],
   imports: [
     CommonModule,
@@ -41,6 +41,6 @@ import { ProductListComponent } from './product-list/product-list.component';
     HttpClientModule,
     MatTableModule
   ],
-  exports: [FooterComponent,HeaderComponent]
+  exports: [FooterComponent,HeaderComponent,AddProductComponent,ProductDetailComponent,ProductListComponent]
 })
 export class Module1Module { }
