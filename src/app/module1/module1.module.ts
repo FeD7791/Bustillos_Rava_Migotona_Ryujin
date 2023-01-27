@@ -13,6 +13,9 @@ import {MatTableModule} from '@angular/material/table';
 ///////////////////////Componentes//////////////////////////////////////
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 
 
@@ -22,6 +25,9 @@ import { HeaderComponent } from './header/header.component';
   declarations: [
     FooterComponent,
     HeaderComponent,
+    ProductDetailComponent,
+    AddProductComponent,
+    ProductListComponent,
     
   ],
   providers: [
