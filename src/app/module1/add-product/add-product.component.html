@@ -1,1 +1,24 @@
 <p>add-product works!</p>
+
+<form id="addproduct" [formGroup]="formulario">
+    <fieldset form="addproduct">
+        <label for="nombre">Nombre</label><br>
+        <input type="text" id="nombre" formControlName="nombre"><br>
+
+        <label for="descripcion">Descripcion</label><br>
+        <textarea type="text" id="descripcion" rows="10" cols="30" formControlName="descripcion"></textarea><br>
+
+        <label for="precio">Precio</label><br>
+        <input type="number" id="precio" formControlName="precio"><br>
+
+        <label for="url1">URL Producto Principal</label><br>
+        <input type="text" id="url1" formControlName="url1"><br>
+
+        <label for="url2">URL Vista producto 1</label><br>
+        <input type="text" id="url2" formControlName="url2"><br>
+
+        <label for="url3">URL Vista producto 2</label><br>
+        <input type="text" id="url3" formControlName="url3"><br>
+    </fieldset><br>
+    <button type="submit">Agregar producto</button>
+</form>

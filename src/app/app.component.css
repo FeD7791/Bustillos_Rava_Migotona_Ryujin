@@ -1,4 +1,8 @@
 .main_container{
-   
+    flex-direction: column;
+    display: flex;
+    align-items: center;
     overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
  }

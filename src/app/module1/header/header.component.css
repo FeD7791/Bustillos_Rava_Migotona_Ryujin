@@ -190,8 +190,12 @@
 .bar_menu{
     visibility: visible;
     color: white;
-    
+    background-color: black;
     padding: 10px;
+}
+
+.bar_menu:hover{
+    border-color: white;
 }
 
 .map_bar_menu{
