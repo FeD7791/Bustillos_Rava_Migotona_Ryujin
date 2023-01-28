@@ -8,10 +8,10 @@ const productos = require('../models').productos
 //{input} = objeto introducido en los campos al crear nuevo objeto
 
 const add_product = async(req,res) => {
-    const {nombre,descripcion,precio,url1,url2,url3} = req.body
+    const {nombre,descripcion,precio} = req.body
     return await productos.findOrCreate({
         where:{nombre:nombre} , 
-        defaults:{nombre,descripcion,precio,url1,url2,url3}
+        defaults:{nombre,descripcion,precio}
     }).then(productos => res.status(200).send(productos)).catch(error => res.send(500))
     
    
@@ -49,12 +49,15 @@ const delete_product = async (req,res) => {
 }
 
 //Update product
-//nombre: Nombre del producto a actualizar
+//nombre: Nombre del producto a actualizar (fila)
 //field: nombre de la columna a actualizar
 //new_field_input: nuevo input en field
-//Actualiza: descripcion/precio/url1/url2/url3
+//Actualiza: descripcion/precio/iagen1
 const update_product = async (req,res) => {
     const {nombre, field, new_field_input } = req.body
+    console.log(nombre)
+    console.log(field)
+    console.log(new_field_input)
     const parsed_nombre = nombre.replace(/_/g,' ')
     console.log(parsed_nombre)
     switch(field){
@@ -78,36 +81,17 @@ const update_product = async (req,res) => {
                 }
             ).then(productos => res.status(200).send(productos)).catch(error => res.status(500).send(error))
         break;
-        case 'url1':
+        case 'imagen1':
             await productos.update(
                 { 
-                    url1:new_field_input
+                    imagen1:new_field_input
                 },
                 {
                     where: {nombre:parsed_nombre}
                 }
             ).then(productos => res.status(200).send(productos)).catch(error => res.status(500).send(error))
         break;
-        case 'url2':
-            await productos.update(
-                { 
-                    url2:new_field_input
-                },
-                {
-                    where: {nombre:parsed_nombre}
-                }
-            ).then(productos => res.status(200).send(productos)).catch(error => res.status(500).send(error))
-        break;
-        case 'url3':
-            await productos.update(
-                { 
-                    url3:new_field_input
-                },
-                {
-                    where: {nombre:parsed_nombre}
-                }
-            ).then(productos => res.status(200).send(productos)).catch(error => res.status(500).send(error))
-        break;
+        
     }
     
 }

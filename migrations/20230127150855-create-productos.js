@@ -18,14 +18,8 @@ module.exports = {
       precio: {
         type: Sequelize.DECIMAL
       },
-      url1: {
-        type: Sequelize.STRING
-      },
-      url2: {
-        type: Sequelize.STRING
-      },
-      url3: {
-        type: Sequelize.STRING
+      imagen1: {
+        type: Sequelize.BLOB('medium')
       },
       createdAt: {
         allowNull: false,
