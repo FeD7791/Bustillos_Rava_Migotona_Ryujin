@@ -1,6 +1,6 @@
 <p>add-product works!</p>
 
-<form id="addproduct" [formGroup]="formulario">
+<form id="addproduct" [formGroup]="formulario" (ngSubmit)="onsubmit()">
     <fieldset form="addproduct">
         <label for="nombre">Nombre</label><br>
         <input type="text" id="nombre" formControlName="nombre"><br>

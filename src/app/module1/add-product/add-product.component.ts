@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl} from '@angular/forms';
-import { CrudService } from '../crud.service';
+import { CrudService, form_elements } from '../crud.service';
 
 @Component({
   selector: 'app-add-product',
@@ -8,7 +8,8 @@ import { CrudService } from '../crud.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent {
-  formulario: FormGroup
+  public formulario: FormGroup
+  
 
   constructor(private crud: CrudService){
     this.formulario = new FormGroup({
@@ -19,6 +20,12 @@ export class AddProductComponent {
       url2: new FormControl(),
       url3: new FormControl()
     })
+  }
+
+  onsubmit(){
+    // console.log(this.formulario.value)
+    // this.crud.http.post<form_elements>(this.crud.URL_create_product,this.formulario.value).subscribe(this.crud.myobserver)
+    this.crud.create_product(this.formulario.value)
   }
 
 }

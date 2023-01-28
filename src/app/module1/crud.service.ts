@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+
 
 export interface form_elements{
   nombre: string,
@@ -12,7 +14,22 @@ export interface form_elements{
   providedIn: 'root'
 })
 export class CrudService {
-  private URL_create_product: string = 'http://localhost:3000/productos/create'
+  public URL_create_product: string = 'http://localhost:3000/productos/create'
+  
+  
+  
 
-  constructor() { }
+  public myobserver = {
+    next: (x:form_elements) => {console.log(x)},
+    err: (err:HttpErrorResponse) => {console.log(err)}
+  }
+
+  constructor(public http: HttpClient) { //httpclient siempre en el constructor!!
+    
+  }
+  
+  create_product(product:form_elements){
+    this.http.post<form_elements>(this.URL_create_product,product).subscribe(this.myobserver)
+  }
+
 }
