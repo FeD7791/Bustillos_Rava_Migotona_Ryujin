@@ -8,11 +8,11 @@ const productos = require('../models').productos
 //{input} = objeto introducido en los campos al crear nuevo objeto
 
 const add_product = async(req,res) => {
-    const {nombre,descripcion,precio} = req.body
+    const {nombre,descripcion,precio,imagen1} = req.body
     return await productos.findOrCreate({
         where:{nombre:nombre} , 
-        defaults:{nombre,descripcion,precio}
-    }).then(productos => res.status(200).send(productos)).catch(error => res.send(500))
+        defaults:{nombre,descripcion,precio,imagen1}
+    }).then(productos => res.status(200).send(productos)).catch(error => res.status(500).send(error))
     
    
 

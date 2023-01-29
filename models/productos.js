@@ -17,9 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     nombre: DataTypes.STRING,
     descripcion: DataTypes.STRING,
     precio: DataTypes.DECIMAL,
-    url1: DataTypes.STRING,
-    url2: DataTypes.STRING,
-    url3: DataTypes.STRING
+    imagen1: DataTypes.BLOB('medium')
   }, {
     sequelize,
     modelName: 'productos',

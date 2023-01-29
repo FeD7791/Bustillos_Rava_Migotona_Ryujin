@@ -11,14 +11,10 @@
         <label for="precio">Precio</label><br>
         <input type="number" id="precio" formControlName="precio"><br>
 
-        <label for="url1">URL Producto Principal</label><br>
-        <input type="text" id="url1" formControlName="url1"><br>
+        <label for="imagen1">Imagen producto</label><br>
+        <input type="file" accept="image/*" id="imagen1" formControlName="imagen1"><br>
+        <!-- <img class="display_image" src="{{this.formulario.value.imagen1}}"> -->
 
-        <label for="url2">URL Vista producto 1</label><br>
-        <input type="text" id="url2" formControlName="url2"><br>
-
-        <label for="url3">URL Vista producto 2</label><br>
-        <input type="text" id="url3" formControlName="url3"><br>
     </fieldset><br>
     <button type="submit">Agregar producto</button>
 </form>
