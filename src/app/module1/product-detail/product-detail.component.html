@@ -1,2 +1,45 @@
 <p>product-detail works!</p>
+<h2>display picture here</h2>
+<div>
 
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{this.crud.one_product.nombre}}</mat-card-title>
+          <mat-card-subtitle>Precio: {{this.crud.one_product.precio}}</mat-card-subtitle>
+        </mat-card-header>
+        <!-- <img mat-card-image src="{{this.crud.one_product.url1}}" alt="Photo of product"> -->
+        <img mat-card-image src="../../../assets/product_images/mansiones_de_la_locura/imagen1.png">
+        <mat-card-content>
+          <p>
+            {{this.crud.one_product.descripcion}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+<!-- <h2>{{this.crud.one_product.nombre}}</h2>
+<h3>{{this.crud.one_product.descripcion}}</h3> -->
+</div>
+<div>
+  <button>Borrar Producto</button>
+  <div>
+  <h2>Editar producto</h2>
+  <form method="post" [formGroup]="formulario" (ngSubmit)="edit_onclick()">
+    <label for="parameters">Elige un campo para editar</label><br>
+    <select id="parameters" name="parameters" formControlName="field">
+      <!-- <option value="nombre">Nombre</option> -->
+      <option value="descripcion">Descripcion</option>
+      <option value="precio">Precio</option>
+      <option value="url1">URL 1</option>
+      <option value="url2">URL 2</option>
+      <option value="url3">URL 3</option>
+
+    </select><br>
+    <input type="text" placeholder="Ingresar valor" formControlName="new_field_input"><br>
+    <button type="submit">Editar</button>
+  </form>
+  </div>
+</div>

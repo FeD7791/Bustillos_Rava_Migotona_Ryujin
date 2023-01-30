@@ -22,10 +22,10 @@ router_web.post('/create', add_product)
 router_web.get('/', fetch_all)
 
 //Obtener un solo producto
-router_web.get('/:nombre', fetch_one)
+router_web.get('/:id', fetch_one)
 
 //Borrar un proucto
-router_web.delete('/:nombre', delete_product)
+router_web.delete('/:id', delete_product)
 
 //Actualizar producto
 router_web.post('/update', update_product)

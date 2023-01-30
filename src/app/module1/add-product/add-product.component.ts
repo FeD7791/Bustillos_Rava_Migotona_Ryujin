@@ -21,8 +21,10 @@ export class AddProductComponent {
       nombre: new FormControl(),
       descripcion: new FormControl(),
       precio: new FormControl(),
-      imagen1: new FormControl(),
-      
+      // imagen1: new FormControl(),
+      url1: new FormControl(),
+      url2: new FormControl(),
+      url3: new FormControl(),
     })
     
     

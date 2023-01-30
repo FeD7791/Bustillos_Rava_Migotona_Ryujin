@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
+
 ////////////////////////////////////////////////////////////////////////
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import {  FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
 
 ///////////////////////Componentes//////////////////////////////////////
 import { FooterComponent } from './footer/footer.component';
@@ -17,10 +19,12 @@ import { ProductListComponent } from './product-list/product-list.component';
 
 ///////////////////// Servicios ////////////////////////////////////////
 import { CrudService } from './crud.service';
+import { FilterPipe } from './filter.pipe';
 
 
 const routes: Routes = [
   { path: 'productdetail', component: ProductDetailComponent },
+  { path: 'productdetail/:id', component: ProductDetailComponent },
   { path: 'addproduct', component: AddProductComponent },
   { path: 'productlist', component: ProductListComponent }
 ];
@@ -33,6 +37,7 @@ const routes: Routes = [
     ProductDetailComponent,
     AddProductComponent,
     ProductListComponent,
+    FilterPipe,
     
   ],
   providers: [
@@ -45,7 +50,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     MatTableModule,
-    RouterModule.forRoot(routes)//routes
+    RouterModule.forRoot(routes),//routes
+    MatCardModule,
   ],
   exports: [FooterComponent,HeaderComponent,AddProductComponent,ProductDetailComponent,ProductListComponent,RouterModule]//export routes
 })

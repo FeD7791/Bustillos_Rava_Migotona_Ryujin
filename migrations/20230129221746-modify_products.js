@@ -1,5 +1,7 @@
 'use strict';
 
+const { STRING } = require('sequelize');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
@@ -9,11 +11,14 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    return Promise.all([
-      queryInterface.removeColumn('productos', 'url1'),
-      queryInterface.removeColumn('productos', 'url2'),
-      queryInterface.removeColumn('productos', 'url3'),
-    ]);
+    await queryInterface.addColumn(
+      'productos', // table name
+      'url1', // new field name
+      {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+    )
   },
 
   async down (queryInterface, Sequelize) {
@@ -23,10 +28,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    return Promise.all([
-      queryInterface.removeColumn('productos', 'url1'),
-      queryInterface.removeColumn('productos', 'url2'),
-      queryInterface.removeColumn('productos', 'url3'),
-    ]);
+    
   }
 };

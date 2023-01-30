@@ -5,42 +5,51 @@
     
 
 </div> -->
-<table mat-table [dataSource]="array">
 
+<!-- <div class="form-group">
+  <label for="search-text">Search Text</label>
+  <input type="text" class="form-control" id="search-text" aria-describedby="search-text" 
+    [(ngModel)]="searchText" placeholder="Enter text to search" 
+    autofocus>
+</div> -->
+
+<table mat-table [dataSource]="this.crud.products_all">
+  
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> Id </th>
-    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-
-  </ng-container>
+    <td mat-cell *matCellDef="let element"> {{element.id }} </td>
+    
+    </ng-container>
 
   <ng-container matColumnDef="nombre">
     <th mat-header-cell *matHeaderCellDef> Nombre </th>
-    <td mat-cell *matCellDef="let element"><button>{{element.nombre}} </button></td>
-
+    <td mat-cell *matCellDef="let element"><button  routerLink="{{ '/productdetail/' + element.id}}" >{{element.nombre |filter  }} </button></td>
+    
   </ng-container>
 
   <ng-container matColumnDef="descripcion">
     <th mat-header-cell *matHeaderCellDef> Descripcion </th>
-    <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.descripcion |filter  }} </td>
 
   </ng-container>
 
   <ng-container matColumnDef="precio">
     <th mat-header-cell *matHeaderCellDef> Precio</th>
-    <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.precio  }} </td>
 
   </ng-container>
 
   <ng-container matColumnDef="createdAt">
     <th mat-header-cell *matHeaderCellDef> Fecha de creacion</th>
-    <td mat-cell *matCellDef="let element"> {{element.createdAt}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.createdAt | date}} </td>
 
   </ng-container>
-
+  
 
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
 
   
