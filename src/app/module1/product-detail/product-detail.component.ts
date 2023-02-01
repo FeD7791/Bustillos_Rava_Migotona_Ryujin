@@ -43,8 +43,6 @@ export class ProductDetailComponent implements OnInit  {
     }else if(this.formulario.value.new_field_input == null ){
       this.snackbar.open('Introducir modificacion del campo', 'Aceptar', {duration: 3000});
 
-    }else if(this.formulario.value.precio == null){
-      this.snackbar.open('Introducir un precio', 'Aceptar', {duration: 3000});
     }else{
       this.formulario.value.id = this.activatedroute.snapshot.paramMap.get('id')
       this.crud.edit_one_product(this.formulario.value)
