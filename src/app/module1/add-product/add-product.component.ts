@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, ControlContainer} from '@angular/forms';
 import { CrudService, form_elements } from '../crud.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -13,11 +14,12 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class AddProductComponent {
   public formulario: FormGroup
+  faarrow=faArrowAltCircleLeft
   
   
   
 
-  constructor(private crud: CrudService, private snackbar: MatSnackBar){
+  constructor(public crud: CrudService, private snackbar: MatSnackBar){
     this.formulario = new FormGroup({
       nombre: new FormControl(),
       descripcion: new FormControl(),
@@ -32,7 +34,8 @@ export class AddProductComponent {
     
     
   }
-
+  
+  
   
   
   

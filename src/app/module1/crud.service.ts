@@ -1,6 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable} from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { BehaviorSubject, of } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
+import { MatTableDataSource} from '@angular/material/table';
+
 
 
 
@@ -31,11 +33,13 @@ export interface edit_formbody{
 export class CrudService {
   public URL_create_product: string = 'http://localhost:3000/productos/create'
   public URL_get_all: string = 'http://localhost:3000/productos/'
-  public products_all: form_elements[] = []
+  public products_all: any
+  
+  
   public one_product: form_elements = {nombre:'N/A',descripcion:'N/A',precio:'N/A'}
   
   alpha$:BehaviorSubject<form_elements[]> =new BehaviorSubject<form_elements[]>([])
-  
+ 
   
 
   public myobserver = {
@@ -57,7 +61,15 @@ export class CrudService {
   }
 
   get_all_products(){
-    this.http.get<form_elements[]>(this.URL_get_all).subscribe(obs => this.products_all = obs)
+    
+    this.http.get<form_elements[]>(this.URL_get_all).subscribe(obs => {
+      
+    this.products_all = new MatTableDataSource<form_elements>(obs)
+    
+    
+    
+    })
+    
 
     this.http.get<form_elements[]>(this.URL_get_all).subscribe(obs => {
       this.alpha$.next(obs)

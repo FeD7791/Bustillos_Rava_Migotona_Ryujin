@@ -11,7 +11,7 @@ import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
-export class ProductDetailComponent implements OnInit {
+export class ProductDetailComponent implements OnInit  {
   faarrow=faArrowAltCircleLeft
   formulario: FormGroup
 
@@ -69,4 +69,8 @@ export class ProductDetailComponent implements OnInit {
     this.crud.get_one_product(this.product_id)
 
   }
+
+  
+
+  
 }

@@ -57,6 +57,18 @@ button{
     padding-bottom: 100px;
 }
 
+.div3{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding-right: 50px;
+}
+
+/* .extra_display{
+    border: solid black 2px;
+
+} */
+
 form{
     flex-direction: column;
     display: flex;

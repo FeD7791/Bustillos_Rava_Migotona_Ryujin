@@ -50,6 +50,7 @@ button{
     align-items: center;
     background-image: url(../../../assets/Screenshot_5.jpg);
     background-size: cover;
+    border: solid black 2px;
     width: 400px;
     height: 600px;
 }

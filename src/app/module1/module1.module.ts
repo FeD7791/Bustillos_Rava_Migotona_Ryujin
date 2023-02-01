@@ -14,6 +14,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 ///////////////////////Componentes//////////////////////////////////////
 import { FooterComponent } from './footer/footer.component';
@@ -65,7 +66,8 @@ const routes: Routes = [
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatPaginatorModule
   ],
   exports: [FooterComponent,HeaderComponent,AddProductComponent,ProductDetailComponent,ProductListComponent,RouterModule,ManagerDesktopComponent]//export routes
 })

@@ -1,8 +1,9 @@
 
 <h1>Agregar Producto</h1>
+<div class="div0">
 <form id="addproduct" [formGroup]="formulario" (ngSubmit)="onsubmit()">
     <fieldset form="addproduct">
-        <div class="div0">
+        
         <mat-form-field appearance="fill">
         <mat-label for="nombre">Nombre</mat-label><br>
         <input matInput type="text" id="nombre" formControlName="nombre">
@@ -12,22 +13,19 @@
         <mat-label for="descripcion">Descripcion</mat-label><br>
         <textarea matInput type="text" id="descripcion" rows="10" cols="30" formControlName="descripcion"></textarea>
         </mat-form-field>
-        </div>
+       
         
-        <div class="div1">
+        
         <mat-form-field appearance="fill">
         <mat-label for="precio">Precio</mat-label><br>
         <input matInput type="number" id="precio" formControlName="precio">
         </mat-form-field>
 
-        <!-- <label for="imagen1">Imagen producto</label><br>
-        <input type="file" accept="image/*" id="imagen1" formControlName="imagen1"><br> -->
-        <!-- <img class="display_image" src="{{this.formulario.value.imagen1}}"> -->
 
         <mat-form-field appearance="fill">
         <mat-label for="precio">Url Imagen 1</mat-label><br>
         <input matInput type="text" id="url1" formControlName="url1">
-        <mat-hint align="start" style="color: black; font-family: second_font;">../../../assets/product_images/nombre_producto.png/.jpg</mat-hint>
+        <mat-hint align="start" style="color: black; font-family: second_font;">../../../assets/product_images/nombre_producto.png</mat-hint>
         </mat-form-field>
         
         <mat-form-field appearance="fill">
@@ -41,8 +39,15 @@
         <input matInput type="text" id="url3" formControlName="url3">
         <mat-hint align="start" style="color: black; font-family: second_font;">Campo no obligatorio</mat-hint>
         </mat-form-field>
-        </div>
+        
 
     </fieldset><br>
+    
     <button mat-raised-button color="accent" type="submit" style="font-family: second_font;">Agregar producto</button>
+   
+    
 </form>
+<br>
+<button mat-raised-button color="accent" (click)="this.crud.go_to_manager_desktop()" style="font-family: second_font; position: relative;right: 150px;"><fa-icon [icon]="faarrow" size="1x"></fa-icon>Escritorio</button>
+</div>
+
