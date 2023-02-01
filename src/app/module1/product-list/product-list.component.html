@@ -1,15 +1,16 @@
 
 
 
-<div class="form-group">
+<!-- <div class="form-group">
   <mat-form-field appearance="fill" style="position: relative; right: 150px;">
   <label for="search-text"></label><br>
   <input matInput type="text" class="form-control" id="search-text" aria-describedby="search-text" 
     [(ngModel)]="searchText" placeholder="Buscar por Nombre" 
     autofocus (keydown)="this.crud.filter_products(searchText)">
   </mat-form-field>
-  <button mat-raised-button color="accent" style="font-family: second_font; width: 20vw;" (click)="this.crud.go_to_manager_desktop()">Ir al Escritorio</button>
-</div>
+  
+</div> -->
+<button mat-raised-button color="accent" style="font-family: second_font; width: 200px;" (click)="this.crud.go_to_manager_desktop()">Ir al Escritorio</button>
 
 <table mat-table [dataSource]="this.crud.products_all" >
   
