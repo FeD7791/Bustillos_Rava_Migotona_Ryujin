@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { BehaviorSubject, of } from 'rxjs';
 
 
 
 
 export interface form_elements{
   id?: number,
-  nombre?: string,
-  descripcion?: string,
-  precio?: string,
+  nombre: string,
+  descripcion: string,
+  precio: string,
   imagen1?: any,
   createdAt?: Date,
   updatedAt?: Date,
@@ -33,6 +34,9 @@ export class CrudService {
   public products_all: form_elements[] = []
   public one_product: form_elements = {nombre:'N/A',descripcion:'N/A',precio:'N/A'}
   
+  alpha$:BehaviorSubject<form_elements[]> =new BehaviorSubject<form_elements[]>([])
+  
+  
 
   public myobserver = {
     next: (x:form_elements) => {console.log(x)},
@@ -54,6 +58,51 @@ export class CrudService {
 
   get_all_products(){
     this.http.get<form_elements[]>(this.URL_get_all).subscribe(obs => this.products_all = obs)
+
+    this.http.get<form_elements[]>(this.URL_get_all).subscribe(obs => {
+      this.alpha$.next(obs)
+    })
+
+  }
+  
+
+  filter_products(key:string){
+    let reg = new RegExp(key)
+    console.log(key)
+    let new_obs:form_elements[]=[]
+    
+    this.alpha$.subscribe(obs =>{
+        
+      obs.forEach(a =>{
+        
+        
+        
+        
+        if(reg.test(a.nombre.toLowerCase()) && new_obs.length < obs.length){
+          
+          new_obs.push(a)
+        }
+        })
+        
+        
+        this.products_all = new_obs
+        
+
+
+
+    })
+   
+    
+    
+    
+    
+    
+      
+      
+
+    
+    
+    
   }
   
   URL_builder(id:string | null){
@@ -62,31 +111,9 @@ export class CrudService {
 
   
 
-_arrayBufferToBase64( buffer:any ) {
-  var binary = '';
-  var bytes = new Uint8Array( buffer );
-  
-  var len = bytes.byteLength;
-  for (var i = 0; i < len; i++) {
-      binary += String.fromCharCode( bytes[ i ] );
-  }
-  return btoa( binary );
-}
 
-  blob_image_parser(image:any){
-    
-    const imagep = this._arrayBufferToBase64(image)
-    // let imagennnn = new Blob ([ new Uint8Array(image)])
-    let imagennnn = new Blob (image)
-    let reader = new FileReader()
-    console.log(imagennnn)
-    // return this._arrayBufferToBase64(image)
-    reader.readAsDataURL(imagennnn)
-    console.log(reader.result)
-    return reader.result
-    
 
-  }
+
 
   get_one_product(id:string | null){
 
@@ -106,6 +133,24 @@ _arrayBufferToBase64( buffer:any ) {
     
   }
 
-  
+  delete_product(id:string | null){
+    const URL = this.URL_builder(id)
+    this.http.delete<form_elements>(URL).subscribe(obs => {this.one_product = obs
+      
+      
+    })
+  }
+
+  go_to_productlist(){
+    location.replace('/productlist')
+  }
+
+  go_to_addproduct(){
+    location.replace('/addproduct')
+  }
+
+  go_to_manager_desktop(){
+    location.replace('/')
+  }
 
 }

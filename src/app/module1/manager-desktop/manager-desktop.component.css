@@ -11,53 +11,45 @@
     
 }
 
-h1{
-    font-family: myFirstFont;
-    color: red;
-}
-
-
-.display_image{
-    width: 375px;
-    height: 211px;
-    border: 1px solid black;
-    background-position: center;
-    background-size: cover;
-
-}
-
-form{
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+button{
     font-family: second_font;
-}
-
-fieldset{
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    background-color: black;
-    background-image: url(../../../assets/Screenshot_1.jpg);
-    background-size: cover;
-    padding-right: 300px;
     
 }
 
 .div0{
-    padding-right: 10px;
-    flex-direction: column;
+    flex-direction: row;
     display: flex;
-    align-items: center;
     
 }
 
 .div1{
-    padding-left: 10px;
     flex-direction: column;
     display: flex;
+    justify-content: center;
     align-items: center;
-    
+    background-image: url(../../../assets/Screenshot_1.jpg);
+    background-size: cover;
+    border: solid black 2px;
+    width: 400px;
+    height: 600px;
 }
 
+.div2{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 600px;
+}
+
+.div3{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../assets/Screenshot_5.jpg);
+    background-size: cover;
+    width: 400px;
+    height: 600px;
+}

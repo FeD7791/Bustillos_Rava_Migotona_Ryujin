@@ -1,29 +1,48 @@
-<p>add-product works!</p>
 
+<h1>Agregar Producto</h1>
 <form id="addproduct" [formGroup]="formulario" (ngSubmit)="onsubmit()">
     <fieldset form="addproduct">
-        <label for="nombre">Nombre</label><br>
-        <input type="text" id="nombre" formControlName="nombre"><br>
+        <div class="div0">
+        <mat-form-field appearance="fill">
+        <mat-label for="nombre">Nombre</mat-label><br>
+        <input matInput type="text" id="nombre" formControlName="nombre">
+        </mat-form-field><br>
 
-        <label for="descripcion">Descripcion</label><br>
-        <textarea type="text" id="descripcion" rows="10" cols="30" formControlName="descripcion"></textarea><br>
-
-        <label for="precio">Precio</label><br>
-        <input type="number" id="precio" formControlName="precio"><br>
+        <mat-form-field appearance="fill">
+        <mat-label for="descripcion">Descripcion</mat-label><br>
+        <textarea matInput type="text" id="descripcion" rows="10" cols="30" formControlName="descripcion"></textarea>
+        </mat-form-field>
+        </div>
+        
+        <div class="div1">
+        <mat-form-field appearance="fill">
+        <mat-label for="precio">Precio</mat-label><br>
+        <input matInput type="number" id="precio" formControlName="precio">
+        </mat-form-field>
 
         <!-- <label for="imagen1">Imagen producto</label><br>
         <input type="file" accept="image/*" id="imagen1" formControlName="imagen1"><br> -->
         <!-- <img class="display_image" src="{{this.formulario.value.imagen1}}"> -->
 
-        <label for="precio">Url Imagen 1</label><br>
-        <input type="text" id="url1" formControlName="url1"><br>
+        <mat-form-field appearance="fill">
+        <mat-label for="precio">Url Imagen 1</mat-label><br>
+        <input matInput type="text" id="url1" formControlName="url1">
+        <mat-hint align="start" style="color: black; font-family: second_font;">../../../assets/product_images/nombre_producto.png/.jpg</mat-hint>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+        <mat-label for="precio">Url Imagen 2</mat-label><br>
+        <input matInput type="text" id="url2" formControlName="url2">
+        <mat-hint align="start" style="color: black; font-family: second_font;">Campo no obligatorio</mat-hint>
+        </mat-form-field>
 
-        <label for="precio">Url Imagen 1</label><br>
-        <input type="text" id="url2" formControlName="url2"><br>
-
-        <label for="precio">Url Imagen 1</label><br>
-        <input type="text" id="url3" formControlName="url3"><br>
+        <mat-form-field appearance="fill">
+        <mat-label for="precio">Url Imagen 3</mat-label><br>
+        <input matInput type="text" id="url3" formControlName="url3">
+        <mat-hint align="start" style="color: black; font-family: second_font;">Campo no obligatorio</mat-hint>
+        </mat-form-field>
+        </div>
 
     </fieldset><br>
-    <button type="submit">Agregar producto</button>
+    <button mat-raised-button color="accent" type="submit" style="font-family: second_font;">Agregar producto</button>
 </form>

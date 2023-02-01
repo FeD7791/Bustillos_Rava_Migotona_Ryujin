@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, ControlContainer} from '@angular/forms';
 import { CrudService, form_elements } from '../crud.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 
 
@@ -16,7 +17,7 @@ export class AddProductComponent {
   
   
 
-  constructor(private crud: CrudService){
+  constructor(private crud: CrudService, private snackbar: MatSnackBar){
     this.formulario = new FormGroup({
       nombre: new FormControl(),
       descripcion: new FormControl(),
@@ -36,8 +37,21 @@ export class AddProductComponent {
   
   
   onsubmit(){
+
+    if(this.formulario.value.nombre ==null){
+      this.snackbar.open('Introducir un nombre', 'Aceptar', {duration: 3000});
+
+    }else if(this.formulario.value.descripcion ==null){
+      this.snackbar.open('Introducir una descripcion', 'Aceptar', {duration: 3000});
+    }else if(this.formulario.value.url1 ==null){
+      this.snackbar.open('Introducir una url de imagen de producto', 'Aceptar', {duration: 3000});
+    }else{
+      this.crud.create_product(this.formulario.value)
+      this.snackbar.open('Producto agregado', 'Aceptar', {duration: 3000});
+      location.replace('/productlist')
+    }
     
-    this.crud.create_product(this.formulario.value)
+    
   }
 
 }

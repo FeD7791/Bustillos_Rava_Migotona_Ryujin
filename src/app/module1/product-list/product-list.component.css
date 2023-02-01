@@ -1,0 +1,43 @@
+.button_link{
+    
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+
+}
+
+button{
+    width: 20vw;
+    
+
+
+}
+
+@font-face {
+   
+    font-family: second_font;
+    src: url(../../public/fonts/DynaPuff-Bold.ttf);
+    
+}
+
+table *{
+    font-family: second_font;
+    font-size: 2vh;
+    
+    
+}
+
+th{
+    color: red;
+}
+
+td{
+    color: black;
+}
+
+.form-group{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

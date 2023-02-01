@@ -1,0 +1,72 @@
+
+@font-face {
+   
+    font-family: second_font;
+    src: url(../../public/fonts/DynaPuff-Bold.ttf);
+    
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../../public/fonts/Silkscreen-Bold.ttf);
+    
+}
+
+
+button{
+    font-family: second_font;
+}
+
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }
+
+.div0 {
+    flex-direction: row;
+    display: flex;
+    font-family: second_font;
+    
+    
+}
+
+.div2 {
+    flex-direction: column-reverse;
+    display: flex;
+    /* border: solid black 2px; */
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url(../../../assets/Screenshot_1.jpg) ;
+    
+
+}
+
+.div2_0 {
+    display: table-cell;
+    max-width: 600px;
+    
+}
+
+.div2_1 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: solid red 2px; */
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+form{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.example-header-image {
+    background-image: url('../../../assets/logo.png');
+    background-size: cover;
+  }
+
+
+

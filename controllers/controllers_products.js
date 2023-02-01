@@ -59,6 +59,24 @@ const update_product = async (req,res) => {
     // const parsed_nombre = nombre.replace(/_/g,' ')
     
     switch(field){
+        case 'nombre':
+            const pname = await productos.findOne({where: {nombre:new_field_input}})
+            console.log(pname)
+            if(pname != null){
+                res.send("El producto ya existe")
+            }else{
+                await productos.update(
+                    {
+                        nombre:new_field_input
+                    },
+                    {
+                        where: {id:id}
+                    }
+                ).then(productos => res.status(200).send(productos)).catch(error => res.status(500).send(error))
+
+            }
+            
+        break;
         case 'descripcion':
             await productos.update(
                 {

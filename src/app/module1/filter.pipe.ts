@@ -16,10 +16,25 @@ export class FilterPipe implements PipeTransform {
   //  */
 
   transform(value: form_elements, ...args: unknown[]): unknown {
-    // console.log(value)
-    // const word = value.nombre
-    // word.search()
-    return value;
+    // transform(items: form_elements, searchText: string){
+    console.log(value)
+    // let rege = new RegExp(searchText)
+    // console.log(rege)
+    // let boleano1 = rege.test(items.nombre)
+    // console.log(items.nombre)
+    // if(boleano1){
+    //   return items
+    // }else{
+    //   return 'hello'
+    // }
+
+      return value
+  
   }
 
+
+
+
 }
+
+

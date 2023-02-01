@@ -1,19 +1,17 @@
-<p>product-list works!</p>
-<!-- <div *ngFor="let elemento of array">
-    <p>{{elemento.nombre}}  {{elemento.descripcion}}  {{elemento.precio}}  {{elemento.createdAt}}</p>
-    
-    
 
-</div> -->
 
-<!-- <div class="form-group">
-  <label for="search-text">Search Text</label>
-  <input type="text" class="form-control" id="search-text" aria-describedby="search-text" 
-    [(ngModel)]="searchText" placeholder="Enter text to search" 
-    autofocus>
-</div> -->
 
-<table mat-table [dataSource]="this.crud.products_all">
+<div class="form-group">
+  <mat-form-field appearance="fill" style="position: relative; right: 150px;">
+  <label for="search-text"></label><br>
+  <input matInput type="text" class="form-control" id="search-text" aria-describedby="search-text" 
+    [(ngModel)]="searchText" placeholder="Buscar Producto" 
+    autofocus (keydown)="this.crud.filter_products(searchText)">
+  </mat-form-field>
+  <button mat-raised-button color="accent" (click)="this.crud.go_to_manager_desktop()">Ir al Escritorio</button>
+</div>
+
+<table mat-table [dataSource]="this.crud.products_all" >
   
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -23,13 +21,13 @@
 
   <ng-container matColumnDef="nombre">
     <th mat-header-cell *matHeaderCellDef> Nombre </th>
-    <td mat-cell *matCellDef="let element"><button  routerLink="{{ '/productdetail/' + element.id}}" >{{element.nombre |filter  }} </button></td>
+    <td mat-cell *matCellDef="let element" style="height: 20vw;" ><div class="button_link"><button  routerLink="{{ '/productdetail/' + element.id}}" mat-raised-button color="primary">{{element.nombre }} </button ></div></td>
     
   </ng-container>
 
   <ng-container matColumnDef="descripcion">
     <th mat-header-cell *matHeaderCellDef> Descripcion </th>
-    <td mat-cell *matCellDef="let element"> {{element.descripcion |filter  }} </td>
+    <td mat-cell *matCellDef="let element" style="width: 400px;"> {{element.descripcion }} </td>
 
   </ng-container>
 
