@@ -1,6 +1,14 @@
-# Proyecto1BackFront
+# Sprint VI trabajo II
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+
+![desktop](./readme_pics/desktop.png)
+![editar](./readme_pics/editar.png)
+![lista](./readme_pics/lista.png)
+![agregar](./readme_pics/agregar.png)
+![backend](./readme_pics/backend.png)
+![frontend](./readme_pics/backend.png)
+
 
 ## Development server
 
