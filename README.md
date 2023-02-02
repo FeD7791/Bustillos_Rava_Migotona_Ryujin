@@ -1,12 +1,17 @@
 # Sprint VI trabajo II
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
-
+## Vista de escritorio
 ![desktop](./readme_pics/desktop.png)
+## Vista product-detail
 ![editar](./readme_pics/editar.png)
+## Vista product-list
 ![lista](./readme_pics/lista.png)
+## Vista add-product
 ![agregar](./readme_pics/agregar.png)
+## Elementos del backend
 ![backend](./readme_pics/backend.png)
+## Elementos del frontend
 ![frontend](./readme_pics/frontend.png)
 
 
