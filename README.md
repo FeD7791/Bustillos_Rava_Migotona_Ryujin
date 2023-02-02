@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ![lista](./readme_pics/lista.png)
 ![agregar](./readme_pics/agregar.png)
 ![backend](./readme_pics/backend.png)
-![frontend](./readme_pics/backend.png)
+![frontend](./readme_pics/frontend.png)
 
 
 ## Development server
